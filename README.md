@@ -4,9 +4,8 @@ An end-to-end retrieval-augmented generation (RAG) pipeline that answers questio
 
 The part I care most about is the evaluation. Each design decision below came out of a measured failure analysis, and retrieval and generation are evaluated separately on a synthetic question set whose ground-truth chunk is known exactly.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<GITHUB_USERNAME>/<REPO_NAME>/blob/main/notebooks/RAG_HuggingFaceDocs_Milvus.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mdharris128/rag_huggingfacedocs_milvus/blob/main/notebooks/RAG_HuggingFaceDocs_Milvus.ipynb)
 
-<!-- TODO: replace <GITHUB_USERNAME> and <REPO_NAME> in the badge link once the repo exists (the repo must be public for Colab to open it) -->
 
 ## Results at a glance
 
@@ -214,8 +213,8 @@ Every generator was run on the **same retrieved chunk ids**, so the comparison i
 
 ## Reproducing
 
-1. A CUDA GPU. I developed and evaluated everything on a Google Colab T4. The embedder, reranker and local Phi model all run on it.
-2. `pip install -r requirements.txt`
+1. Python 3.13 and a CUDA GPU. I developed and evaluated everything on a Google Colab T4 (Python 3.13.15). The embedder, reranker and local Phi model all run on it.
+2. `pip install -r requirements.txt`. The versions are pinned from the Colab runtime. `torch` is pinned without its CUDA build tag, so outside Colab install the build for your CUDA version from [pytorch.org](https://pytorch.org) first. `bitsandbytes` (used for the 4-bit Phi run) requires an NVIDIA GPU.
 3. Set `HF_TOKEN`, `OPENAI_API_KEY`, and `OPIK_API_KEY` as environment variables (the notebook currently reads them from Colab secrets).
 4. The notebook reads and writes `/content/drive/MyDrive/...`. Either mount Google Drive and copy the files from `data/` there, or change those paths to point at `data/`.
 5. Run the notebook top to bottom: load data, chunk, embed (`bge-m3`, dense + sparse), index into Milvus Lite, then evaluate retrieval and generation.

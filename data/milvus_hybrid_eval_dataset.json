@@ -1,0 +1,1562 @@
+[
+  {
+    "question":"What is the purpose of the VITS model?",
+    "ground_truth_answer":"The VITS model is an end-to-end speech synthesis model that predicts a speech waveform conditional on an input text sequence.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/vits.md",
+    "relevant_chunk_ids":[
+      582
+    ]
+  },
+  {
+    "question":"What should you include when submitting a new feature request for the huggingface_hub library?",
+    "ground_truth_answer":"A good feature request should include the following points: 1. Motivation first: explain if it relates to a problem with the library, a need for a project, or a solution you worked on; 2. A full paragraph describing the feature; 3. A code snippet demonstrating its future use; 4. A link if related to a paper; 5. Any additional information like drawings or screenshots that may help.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/CONTRIBUTING.md",
+    "relevant_chunk_ids":[
+      873
+    ]
+  },
+  {
+    "question":"How can I load a pretrained Res2Net model for evaluation?",
+    "ground_truth_answer":"You can load a pretrained Res2Net model for evaluation by using the following code: `import timm; model = timm.create_model('res2net101_26w_4s', pretrained=True); model.eval()`.",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/res2net.mdx",
+    "relevant_chunk_ids":[
+      56
+    ]
+  },
+  {
+    "question":"How can I download and unzip the wikitext-103 dataset using the command line?",
+    "ground_truth_answer":"You can download and unzip the wikitext-103 dataset using the following commands: `wget https:\/\/s3.amazonaws.com\/research.metamind.io\/wikitext\/wikitext-103-raw-v1.zip` and `unzip wikitext-103-raw-v1.zip`.",
+    "source":"huggingface\/tokenizers\/blob\/main\/docs\/source-doc-builder\/quicktour.mdx",
+    "relevant_chunk_ids":[
+      441
+    ]
+  },
+  {
+    "question":"What is the task of video classification?",
+    "ground_truth_answer":"Video classification is the task of assigning a label or class to an entire video.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/video_classification.md",
+    "relevant_chunk_ids":[
+      495
+    ]
+  },
+  {
+    "question":"What command should I use to finetune the t5-3b model on a single GPU with DeepSpeed?",
+    "ground_truth_answer":"export BS=20\nCUDA_VISIBLE_DEVICES=0 deepspeed --num_gpus=1 .\/finetune_trainer.py \\ --model_name_or_path t5-3b --n_train 60 --n_val 10 \\ --per_device_eval_batch_size $BS --per_device_train_batch_size $BS \\ --task translation_en_to_ro --fp16 --deepspeed ds_config_1gpu.json [...]",
+    "source":"huggingface\/blog\/blob\/main\/zero-deepspeed-fairscale.md",
+    "relevant_chunk_ids":[
+      894
+    ]
+  },
+  {
+    "question":"What is the main issue that RNN-based encoder-decoder models face regarding long-range dependencies?",
+    "ground_truth_answer":"RNNs suffer from the vanishing gradient problem, making it very difficult to capture long-range dependencies.",
+    "source":"huggingface\/blog\/blob\/main\/encoder-decoder.md",
+    "relevant_chunk_ids":[
+      1634
+    ]
+  },
+  {
+    "question":"What is the purpose of calibration in the context of tensor quantization?",
+    "ground_truth_answer":"Calibration is the terminology of passing data samples to the quantizer and deciding the best scaling factors for tensors.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/qdqbert.md",
+    "relevant_chunk_ids":[
+      1263
+    ]
+  },
+  {
+    "question":"What is a common issue with label masking in XLA?",
+    "ground_truth_answer":"A common issue with label masking in XLA is that it creates data-dependent shapes, as the shape of masked outputs and labels depends on how many positions are masked.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_tpu_tf.md",
+    "relevant_chunk_ids":[
+      11
+    ]
+  },
+  {
+    "question":"What is the Top 1 Accuracy of the densenet201 model on the ImageNet dataset?",
+    "ground_truth_answer":"77.29%",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/densenet.mdx",
+    "relevant_chunk_ids":[
+      1446
+    ]
+  },
+  {
+    "question":"What was the average duration of the runs launched by individual participants during the sahajBERT collaborative training event?",
+    "ground_truth_answer":"The runs of individual participants lasted 4 hours on average.",
+    "source":"huggingface\/blog\/blob\/main\/collaborative-training.md",
+    "relevant_chunk_ids":[
+      1790
+    ]
+  },
+  {
+    "question":"What is the purpose of the GPTQ algorithm in the AutoGPTQ library?",
+    "ground_truth_answer":"The GPTQ algorithm is a post-training quantization technique where each row of the weight matrix is quantized independently to find a version of the weights that minimizes the error.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/quantization.md",
+    "relevant_chunk_ids":[
+      572
+    ]
+  },
+  {
+    "question":"What is the purpose of the Pop2Piano model?",
+    "ground_truth_answer":"Pop2Piano is designed for pop audio-based piano cover generation.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ko.md",
+    "relevant_chunk_ids":[
+      1520
+    ]
+  },
+  {
+    "question":"What should you do to avoid corrupting your repository when using the CommitScheduler?",
+    "ground_truth_answer":"You must only append data to existing files or create new files. Deleting or overwriting a file might corrupt your repository.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/upload.md",
+    "relevant_chunk_ids":[
+      811
+    ]
+  },
+  {
+    "question":"What is the title of the paper associated with the GLPN model?",
+    "ground_truth_answer":"Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth",
+    "source":"huggingface\/transformers\/blob\/main\/README.md",
+    "relevant_chunk_ids":[
+      1596
+    ]
+  },
+  {
+    "question":"How can I load a model from the Hugging Face Hub using fastai?",
+    "ground_truth_answer":"You can load a model from the Hugging Face Hub using the `from_pretrained_fastai` function.",
+    "source":"huggingface\/blog\/blob\/main\/fastai.md",
+    "relevant_chunk_ids":[
+      407
+    ]
+  },
+  {
+    "question":"What is the purpose of the model card writing tool designed by Hugging Face?",
+    "ground_truth_answer":"The model card writing tool is designed to lower barriers to entry for creating model cards, enabling people and teams with different skill sets and roles to easily collaborate and create model cards without needing to code or use markdown.",
+    "source":"huggingface\/blog\/blob\/main\/model-cards.md",
+    "relevant_chunk_ids":[
+      1824
+    ]
+  },
+  {
+    "question":"What is the Top 1 Accuracy of the res2net101_26w_4s model on the ImageNet dataset?",
+    "ground_truth_answer":"79.19%",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/res2net.mdx",
+    "relevant_chunk_ids":[
+      59
+    ]
+  },
+  {
+    "question":"What issue was fixed related to the video player?",
+    "ground_truth_answer":"The display of minutes in the video player was fixed.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      676
+    ]
+  },
+  {
+    "question":"Who are the authors of the mLUKE paper?",
+    "ground_truth_answer":"Ryokan Ri, Ikuya Yamada, and Yoshimasa Tsuruoka.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ko.md",
+    "relevant_chunk_ids":[
+      1516
+    ]
+  },
+  {
+    "question":"How can I save evaluation results using the evaluate library?",
+    "ground_truth_answer":"You can use the `evaluate.save` function to easily save metrics results by passing a specific filename or a directory, along with any key-value pairs as inputs to store them in a JSON file.",
+    "source":"huggingface\/evaluate\/blob\/main\/docs\/source\/a_quick_tour.mdx",
+    "relevant_chunk_ids":[
+      1970
+    ]
+  },
+  {
+    "question":"Which models can I deploy for Inference using Hugging Face?",
+    "ground_truth_answer":"You can deploy any \ud83e\udd17 Transformers model trained in Amazon SageMaker, any of the 10,000+ publicly available Transformer models from the Hugging Face Model Hub, or your private models hosted in your Hugging Face premium account!",
+    "source":"huggingface\/blog\/blob\/main\/deploy-hugging-face-models-easily-with-amazon-sagemaker.md",
+    "relevant_chunk_ids":[
+      1892
+    ]
+  },
+  {
+    "question":"How can I access the URLs of Parquet files for a specific dataset on the Hugging Face Hub?",
+    "ground_truth_answer":"You can access the list of the Parquet files URLs with a simple HTTP call to the `\/parquet` endpoint, such as `requests.get('https:\/\/datasets-server.huggingface.co\/parquet?dataset=blog_authorship_corpus')`.",
+    "source":"huggingface\/blog\/blob\/main\/hub-duckdb.md",
+    "relevant_chunk_ids":[
+      161
+    ]
+  },
+  {
+    "question":"What is the purpose of post-training static quantization in a Vision Transformer model?",
+    "ground_truth_answer":"Post-training static quantization lowers memory and compute requirements by reducing the bit width of model parameters, resulting in less memory usage at inference time and faster operations like matrix multiplication due to integer arithmetic.",
+    "source":"huggingface\/blog\/blob\/main\/openvino.md",
+    "relevant_chunk_ids":[
+      833
+    ]
+  },
+  {
+    "question":"\u5982\u4f55\u5728 Gradio \u5e94\u7528\u7a0b\u5e8f\u4e2d\u66f4\u65b0\u5730\u56fe\u7684\u7b5b\u9009\u6761\u4ef6\uff1f",
+    "ground_truth_answer":"\u53ef\u4ee5\u901a\u8fc7\u70b9\u51fb '\u66f4\u65b0\u7b5b\u9009' \u6309\u94ae\u6765\u66f4\u65b0\u5730\u56fe\u7684\u7b5b\u9009\u6761\u4ef6\uff0c\u6309\u94ae\u7684\u70b9\u51fb\u4e8b\u4ef6\u4f1a\u89e6\u53d1 `filter_map` \u51fd\u6570\uff0c\u4f7f\u7528 `min_price`\u3001`max_price` \u548c `boroughs` \u4f5c\u4e3a\u8f93\u5165\u3002",
+    "source":"gradio-app\/gradio\/blob\/main\/guides\/cn\/05_tabular-data-science-and-plots\/plot-component-for-maps.md",
+    "relevant_chunk_ids":[
+      18
+    ]
+  },
+  {
+    "question":"How can I convert the `start` feature of each time series to a pandas `Period` index?",
+    "ground_truth_answer":"You can convert the `start` feature by using the `transform_start_field` function, which utilizes the `convert_to_pandas_period` function to transform each date in the `start` field to a pandas `Period` index based on the provided frequency.",
+    "source":"huggingface\/blog\/blob\/main\/informer.md",
+    "relevant_chunk_ids":[
+      253
+    ]
+  },
+  {
+    "question":"What version of Streamlit introduced automatic iframe resizing?",
+    "ground_truth_answer":"Automatic iframe resizing was introduced in Streamlit version 1.17.0.",
+    "source":"huggingface\/hub-docs\/blob\/main\/docs\/hub\/spaces-sdks-streamlit.md",
+    "relevant_chunk_ids":[
+      958
+    ]
+  },
+  {
+    "question":"What is the average precision (AP) for table detection using the Table Transformer model?",
+    "ground_truth_answer":"The average precision (AP) for table detection using the Table Transformer model is 0.966.",
+    "source":"huggingface\/blog\/blob\/main\/document-ai.md",
+    "relevant_chunk_ids":[
+      792
+    ]
+  },
+  {
+    "question":"What method is used for the TF{{cookiecutter.camelcase_modelname}}ForQuestionAnswering model?",
+    "ground_truth_answer":"call",
+    "source":"huggingface\/transformers\/blob\/main\/templates\/adding_a_new_model\/cookiecutter-template-{{cookiecutter.modelname}}\/{{cookiecutter.lowercase_modelname}}.md",
+    "relevant_chunk_ids":[
+      953
+    ]
+  },
+  {
+    "question":"What version of @gradio\/client was updated in version 0.4.6?",
+    "ground_truth_answer":"@gradio\/client@0.8.2",
+    "source":"gradio-app\/gradio\/blob\/main\/js\/model3D\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      1772
+    ]
+  },
+  {
+    "question":"What are the three components into which a time series can be decomposed according to the excerpt?",
+    "ground_truth_answer":"The three components are trend-cycle, seasonal variation, and random fluctuations.",
+    "source":"huggingface\/blog\/blob\/main\/autoformer.md",
+    "relevant_chunk_ids":[
+      1684
+    ]
+  },
+  {
+    "question":"What is the performance of the baseline model at k=5?",
+    "ground_truth_answer":"The performance of the baseline model at k=5 is 0.837.",
+    "source":"huggingface\/blog\/blob\/main\/fine-tune-clip-rsicd.md",
+    "relevant_chunk_ids":[
+      215
+    ]
+  },
+  {
+    "question":"What argument must be included when using T5 models for summarization tasks?",
+    "ground_truth_answer":"--source_prefix \"summarize: \"",
+    "source":"huggingface\/transformers\/blob\/main\/examples\/pytorch\/summarization\/README.md",
+    "relevant_chunk_ids":[
+      1937
+    ]
+  },
+  {
+    "question":"What is a recommended strategy for learning new tools while working on a project?",
+    "ground_truth_answer":"One recommended strategy is to practice new skills even in situations where they\u2019re not the main learning focus, which is known as 'distributed practice' or 'spaced repetition'. It's suggested to include only one secondary tool in your projects to enhance your learning experience.",
+    "source":"huggingface\/blog\/blob\/main\/your-first-ml-project.md",
+    "relevant_chunk_ids":[
+      886
+    ]
+  },
+  {
+    "question":"What is a common preprocessing step for both auto-regressive and masked language modeling?",
+    "ground_truth_answer":"A common preprocessing step is to concatenate all the examples and then split the whole corpus into chunks of equal size.",
+    "source":"huggingface\/course\/blob\/main\/chapters\/en\/chapter7\/3.mdx",
+    "relevant_chunk_ids":[
+      1156
+    ]
+  },
+  {
+    "question":"How can I install the Agents.js library?",
+    "ground_truth_answer":"You can grab the library from npm with the following command: npm install @huggingface\/agents.",
+    "source":"huggingface\/blog\/blob\/main\/agents-js.md",
+    "relevant_chunk_ids":[
+      1300
+    ]
+  },
+  {
+    "question":"What bug was fixed regarding the `Label` component's Clear button?",
+    "ground_truth_answer":"Fixes issue with Clear button not working for `Label` component by [@abidlabs](https:\/\/github.com\/abidlabs) in [PR 4456](https:\/\/github.com\/gradio-app\/gradio\/pull\/4456).",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      689
+    ]
+  },
+  {
+    "question":"What feature was added to allow setting a concurrency limit other than 1?",
+    "ground_truth_answer":"Allow setting a `default_concurrency_limit` other than 1.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      604
+    ]
+  },
+  {
+    "question":"What is the title of the paper associated with the SpeechToTextTransformer2 model?",
+    "ground_truth_answer":"Large-Scale Self- and Semi-Supervised Learning for Speech Translation",
+    "source":"huggingface\/transformers\/blob\/main\/README.md",
+    "relevant_chunk_ids":[
+      1608
+    ]
+  },
+  {
+    "question":"What are the three main techniques proposed in the Swin Transformer V2 paper to address issues in training and application of large vision models?",
+    "ground_truth_answer":"1) A residual-post-norm method combined with cosine attention to improve training stability; 2) A log-spaced continuous position bias method to effectively transfer models pre-trained using low-resolution images to downstream tasks with high-resolution inputs; 3) A self-supervised pre-training method, SimMIM, to reduce the needs of vast labeled images.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/swinv2.md",
+    "relevant_chunk_ids":[
+      146
+    ]
+  },
+  {
+    "question":"What is DROP in the context of the Open LLM Leaderboard?",
+    "ground_truth_answer":"DROP (Discrete Reasoning Over Paragraphs) is an evaluation where models must extract relevant information from English-text paragraphs before executing discrete reasoning steps on them, such as sorting or counting items to arrive at the correct answer.",
+    "source":"huggingface\/blog\/blob\/main\/leaderboard-drop-dive.md",
+    "relevant_chunk_ids":[
+      1037
+    ]
+  },
+  {
+    "question":"What feature was added in version 0.9.3 regarding queue management?",
+    "ground_truth_answer":"Refactor queue so that there are separate queues for each concurrency id.",
+    "source":"gradio-app\/gradio\/blob\/main\/client\/js\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      973
+    ]
+  },
+  {
+    "question":"What parameter should be used to change the compute data type to bf16 in BitsAndBytesConfig?",
+    "ground_truth_answer":"The parameter to change the compute data type to bf16 is `bnb_4bit_compute_dtype`.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/quantization.md",
+    "relevant_chunk_ids":[
+      578
+    ]
+  },
+  {
+    "question":"What is a slug in the context of fetching a collection?",
+    "ground_truth_answer":"A slug is an identifier for a collection based on the title and a unique ID, and you can find the slug in the URL of the collection page.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/collections.md",
+    "relevant_chunk_ids":[
+      1295
+    ]
+  },
+  {
+    "question":"What change was made to the way public links are generated in version 3.13.1?",
+    "ground_truth_answer":"The tunneling logic based on ssh port-forwarding was replaced with that based on `frp`, providing a more secure and scalable way to create shareable demos.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      732
+    ]
+  },
+  {
+    "question":"What preprocessing operations are required for the model?",
+    "ground_truth_answer":"Data normalization, resizing, and transposition are the preprocessing operations required for the model.",
+    "source":"huggingface\/blog\/blob\/main\/notebooks\/112_vertex_ai_vision.ipynb",
+    "relevant_chunk_ids":[
+      1269
+    ]
+  },
+  {
+    "question":"What are the three high-level categories of metrics for evaluating model performance?",
+    "ground_truth_answer":"The three high-level categories of metrics are: 1. Generic metrics, which can be applied to a variety of situations and datasets; 2. Task-specific metrics, which are limited to a given task; 3. Dataset-specific metrics, which aim to measure model performance on specific benchmarks.",
+    "source":"huggingface\/evaluate\/blob\/main\/docs\/source\/choosing_a_metric.mdx",
+    "relevant_chunk_ids":[
+      1
+    ]
+  },
+  {
+    "question":"What are the characteristics that a good neural network should have to work on graphs?",
+    "ground_truth_answer":"It should be permutation invariant and permutation equivariant.",
+    "source":"huggingface\/blog\/blob\/main\/intro-graphml.md",
+    "relevant_chunk_ids":[
+      1625
+    ]
+  },
+  {
+    "question":"What is the purpose of the BART model?",
+    "ground_truth_answer":"BART is designed for denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension.",
+    "source":"huggingface\/transformers\/blob\/main\/README.md",
+    "relevant_chunk_ids":[
+      1593
+    ]
+  },
+  {
+    "question":"What are the grounds for a permanent ban from the community?",
+    "ground_truth_answer":"Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.",
+    "source":"huggingface\/transformers\/blob\/main\/CODE_OF_CONDUCT.md",
+    "relevant_chunk_ids":[
+      1931
+    ]
+  },
+  {
+    "question":"What is the purpose of the TAPAS model?",
+    "ground_truth_answer":"TAPAS is designed for weakly supervised table parsing via pre-training.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ru.md",
+    "relevant_chunk_ids":[
+      102
+    ]
+  },
+  {
+    "question":"What is the default amount of RAM available in each Spaces environment?",
+    "ground_truth_answer":"Each Spaces environment is limited to 16GB RAM by default.",
+    "source":"huggingface\/hub-docs\/blob\/main\/docs\/hub\/spaces-overview.md",
+    "relevant_chunk_ids":[
+      1461
+    ]
+  },
+  {
+    "question":"How can I customize the appearance of my Gradio application?",
+    "ground_truth_answer":"You can customize the appearance of your Gradio application by using the built-in theme engine, which allows you to choose from various pre-built themes or create your own by passing the `theme=` kwarg to the `Blocks` or `Interface` constructor.",
+    "source":"gradio-app\/gradio\/blob\/main\/guides\/cn\/07_other-tutorials\/theming-guide.md",
+    "relevant_chunk_ids":[
+      427
+    ]
+  },
+  {
+    "question":"What are the Elo rankings for the Vicuna-13B and Koala-13B models without ties?",
+    "ground_truth_answer":"Vicuna-13B has an Elo ranking of 1140, while Koala-13B has an Elo ranking of 1073.",
+    "source":"huggingface\/blog\/blob\/main\/llm-leaderboard.md",
+    "relevant_chunk_ids":[
+      1081
+    ]
+  },
+  {
+    "question":"How can topic models be used in a production setting?",
+    "ground_truth_answer":"Topic models can be used in a production setting to monitor whether topics drift too far from an expected distribution, serving as a signal that there has been drift between the original training data and the types of conversations seen in production.",
+    "source":"huggingface\/blog\/blob\/main\/bertopic.md",
+    "relevant_chunk_ids":[
+      1387
+    ]
+  },
+  {
+    "question":"How many iterations are supported for inference with the consistency decoder?",
+    "ground_truth_answer":"Inference is only supported for 2 iterations as of now.",
+    "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/api\/models\/consistency_decoder_vae.md",
+    "relevant_chunk_ids":[
+      1420
+    ]
+  },
+  {
+    "question":"How can I generate images from captions using the provided API?",
+    "ground_truth_answer":"To generate images from captions, call the \/image API with a caption query parameter, like this: <img src=\"\/image?caption=photo of something in some place\" \/>.",
+    "source":"huggingface\/blog\/blob\/main\/text-to-webapp.md",
+    "relevant_chunk_ids":[
+      863
+    ]
+  },
+  {
+    "question":"What type of generation is used in the benchmarks described in the article?",
+    "ground_truth_answer":"The benchmarks are doing greedy generation of 100 token outputs.",
+    "source":"huggingface\/blog\/blob\/main\/bloom-inference-pytorch-scripts.md",
+    "relevant_chunk_ids":[
+      1794
+    ]
+  },
+  {
+    "question":"What breaking change was introduced regarding chatbot bubble colors?",
+    "ground_truth_answer":"Chatbot bubble colors can no longer be set by `chatbot.style(color_map=)`.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      717
+    ]
+  },
+  {
+    "question":"What new feature allows users to host Machine Learning demo applications on their profiles at Hugging Face?",
+    "ground_truth_answer":"Spaces is a simple and free solution to host Machine Learning demo applications directly on your user profile or your organization profile.",
+    "source":"huggingface\/blog\/blob\/main\/summer-at-huggingface.md",
+    "relevant_chunk_ids":[
+      1811
+    ]
+  },
+  {
+    "question":"What fix was made to the `gr.SelectData` component?",
+    "ground_truth_answer":"The fix ensures that the target attribute is correctly attached, and the filedata is included in the data attribute with `gr.Gallery`.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      645
+    ]
+  },
+  {
+    "question":"What is the purpose of the RePaintScheduler?",
+    "ground_truth_answer":"The RePaintScheduler is a DDPM-based inpainting scheduler for unsupervised inpainting with extreme masks.",
+    "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/api\/schedulers\/repaint.md",
+    "relevant_chunk_ids":[
+      877
+    ]
+  },
+  {
+    "question":"How can I manually stop the execution of my Space?",
+    "ground_truth_answer":"You can manually pause your Space from the Settings tab.",
+    "source":"huggingface\/hub-docs\/blob\/main\/docs\/hub\/spaces-overview.md",
+    "relevant_chunk_ids":[
+      1463
+    ]
+  },
+  {
+    "question":"What are the typical metrics used for Document Image Classification?",
+    "ground_truth_answer":"Accuracy, F1",
+    "source":"huggingface\/blog\/blob\/main\/document-ai.md",
+    "relevant_chunk_ids":[
+      799
+    ]
+  },
+  {
+    "question":"How can the toxicity measurement be used in evaluating text?",
+    "ground_truth_answer":"The toxicity measurement can be used to evaluate any kind of text, be it machine-generated or human-written text scraped from the Internet, to give you a better understanding of its toxicity level. You can also use it to rank different texts to determine which ones have the highest toxicity.",
+    "source":"huggingface\/blog\/blob\/main\/evaluating-llm-bias.md",
+    "relevant_chunk_ids":[
+      1076
+    ]
+  },
+  {
+    "question":"What are the key elements of a vision-language model?",
+    "ground_truth_answer":"A vision-language model typically consists of an image encoder, a text encoder, and a strategy to fuse information from the two encoders.",
+    "source":"huggingface\/blog\/blob\/main\/vision_language_pretraining.md",
+    "relevant_chunk_ids":[
+      1193
+    ]
+  },
+  {
+    "question":"What new component was introduced in version 0.5.0 of Gradio?",
+    "ground_truth_answer":"The new `FileExplorer` component was introduced in version 0.5.0.",
+    "source":"gradio-app\/gradio\/blob\/main\/client\/js\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      975
+    ]
+  },
+  {
+    "question":"How can I set the scheduler for a pipeline using LCM-LoRA?",
+    "ground_truth_answer":"You can set the scheduler by assigning it with 'pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config)'.",
+    "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/using-diffusers\/inference_with_lcm_lora.md",
+    "relevant_chunk_ids":[
+      155
+    ]
+  },
+  {
+    "question":"Why is it important to share your work with the community?",
+    "ground_truth_answer":"Sharing your work allows you to get credit from the community for your contributions, as your code and ported pre-trained models will be used by hundreds and possibly even thousands of developers and researchers.",
+    "source":"huggingface\/transformers\/blob\/main\/templates\/adding_a_new_model\/ADD_NEW_MODEL_PROPOSAL_TEMPLATE.md",
+    "relevant_chunk_ids":[
+      394
+    ]
+  },
+  {
+    "question":"What was fixed regarding the `select` event in `gr.Gallery`?",
+    "ground_truth_answer":"A bug was fixed where the `select` event was not triggered in `gr.Gallery` if `height` was set to be large with `allow_preview=False`.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      684
+    ]
+  },
+  {
+    "question":"What is the focus of the TrOCR model?",
+    "ground_truth_answer":"TrOCR is focused on Transformer-based Optical Character Recognition with Pre-trained Models.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ko.md",
+    "relevant_chunk_ids":[
+      1525
+    ]
+  },
+  {
+    "question":"How does Autoformer utilize autocorrelation in its attention mechanism?",
+    "ground_truth_answer":"Autoformer extracts frequency-based dependencies from the queries and keys using autocorrelation instead of the standard dot-product, calculating the autocorrelation of the queries and keys for all lags at once by FFT.",
+    "source":"huggingface\/blog\/blob\/main\/autoformer.md",
+    "relevant_chunk_ids":[
+      1687
+    ]
+  },
+  {
+    "question":"What parameters were added to the Model3D component in the recent updates?",
+    "ground_truth_answer":"The `height` and `zoom_speed` parameters were added to the `Model3D` component, along with a button to reset the camera position.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      662
+    ]
+  },
+  {
+    "question":"\u5982\u4f55\u4f7f\u7528\u6d41\u6c34\u7ebf API \u8fdb\u884c\u60c5\u7eea\u5206\u6790\uff1f",
+    "ground_truth_answer":"\u53ef\u4ee5\u4f7f\u7528\u4ee5\u4e0b\u4ee3\u7801\uff1a\n```python\nfrom transformers import pipeline\n\n# \u4f7f\u7528\u60c5\u7eea\u5206\u6790\u6d41\u6c34\u7ebf\nclassifier = pipeline('sentiment-analysis')\nclassifier('We are very happy to introduce pipeline to the transformers repository.')\n```\n\u8fd9\u5c06\u8fd4\u56de\u4e00\u4e2a\u5305\u542b\u60c5\u7eea\u6807\u7b7e\u548c\u7f6e\u4fe1\u5ea6\u7684\u7ed3\u679c\u3002",
+    "source":"huggingface\/transformers\/blob\/main\/README_zh-hans.md",
+    "relevant_chunk_ids":[
+      531
+    ]
+  },
+  {
+    "question":"What types of internship positions are available at Hugging Face for 2023?",
+    "ground_truth_answer":"The available internship positions include Accelerate Internship, Text to Speech Internship, Embodied AI Internship, Fast Distributed Training Framework Internship, Datasets for LLMs Internship, Social Impact Evaluation Internship, and AI Art Tooling Internship.",
+    "source":"huggingface\/blog\/blob\/main\/interns-2023.md",
+    "relevant_chunk_ids":[
+      1777
+    ]
+  },
+  {
+    "question":"How can I convert a segmentation bitmap to a semantic bitmap using the Segments.ai SDK?",
+    "ground_truth_answer":"You can use the `get_semantic_bitmap` function from the Segments.ai SDK to convert the bitmaps to semantic bitmaps. To apply this function to all the rows in your dataset, use `dataset.map`.",
+    "source":"huggingface\/blog\/blob\/main\/fine-tune-segformer.md",
+    "relevant_chunk_ids":[
+      1552
+    ]
+  },
+  {
+    "question":"What is the role of the encoder RNN in a sequence-to-sequence task?",
+    "ground_truth_answer":"The encoder RNN encodes an input sequence \\(\\mathbf{X}_{1:n}\\) by successively updating its hidden state, and after processing the last input vector \\(\\mathbf{x}_n\\), it defines the input encoding \\(\\mathbf{c}\\).",
+    "source":"huggingface\/blog\/blob\/main\/encoder-decoder.md",
+    "relevant_chunk_ids":[
+      1630
+    ]
+  },
+  {
+    "question":"What type of input can be used to caption an image with IDEFICS?",
+    "ground_truth_answer":"You can use either an image object (`PIL.Image`) or a url from which the image can be retrieved.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/idefics.md",
+    "relevant_chunk_ids":[
+      1567
+    ]
+  },
+  {
+    "question":"What should be done if any breaking change has been made before releasing `safetensors`?",
+    "ground_truth_answer":"Make sure the version can safely be increased for transformers users, ensuring that `safetensors` version allows users to upgrade without impacting current users.",
+    "source":"huggingface\/safetensors\/blob\/main\/RELEASE.md",
+    "relevant_chunk_ids":[
+      1880
+    ]
+  },
+  {
+    "question":"How can I fine-tune a model for token classification tasks like NER or PoS?",
+    "ground_truth_answer":"You can preprocess the data and fine-tune a pretrained model on a token classification task by following the guide available in the notebook for token classification.",
+    "source":"huggingface\/transformers\/blob\/main\/notebooks\/README.md",
+    "relevant_chunk_ids":[
+      224
+    ]
+  },
+  {
+    "question":"Who contributed to the integration of FairScale and DeepSpeed into transformers?",
+    "ground_truth_answer":"Benjamin Lefaudeux, Mandeep Baines from the FairScale team, and Jeff Rasley, Olatunji Ruwase, Samyam Rajbhandari from the DeepSpeed team contributed to the integration.",
+    "source":"huggingface\/blog\/blob\/main\/zero-deepspeed-fairscale.md",
+    "relevant_chunk_ids":[
+      897
+    ]
+  },
+  {
+    "question":"How can I display evaluation metrics in my model repository on Hugging Face?",
+    "ground_truth_answer":"You can display evaluation metrics in your model repository by adding them under the `model-index` section of your model card.",
+    "source":"huggingface\/blog\/blob\/main\/summer-at-huggingface.md",
+    "relevant_chunk_ids":[
+      1812
+    ]
+  },
+  {
+    "question":"How is the output vector defined in the self-attention mechanism?",
+    "ground_truth_answer":"An output vector \\(\textbf{x''}_j\\) is defined as the weighted sum of all value vectors \\(\textbf{v}_1, \\\\ldots, \textbf{v}_n\\) plus the input vector \\(\textbf{x'}_j\\).",
+    "source":"huggingface\/blog\/blob\/main\/encoder-decoder.md",
+    "relevant_chunk_ids":[
+      1643
+    ]
+  },
+  {
+    "question":"What are the three distinctive characteristics of the Informer model designed for long sequence time-series forecasting?",
+    "ground_truth_answer":"The three distinctive characteristics of the Informer model are: (i) a ProbSparse self-attention mechanism that achieves O(L logL) in time complexity and memory usage, (ii) self-attention distilling that highlights dominating attention by halving cascading layer input, and (iii) a generative style decoder that predicts long time-series sequences at one forward operation.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/informer.md",
+    "relevant_chunk_ids":[
+      1942
+    ]
+  },
+  {
+    "question":"What package manager is used for dependency management in the Gradio UI folder?",
+    "ground_truth_answer":"pnpm",
+    "source":"gradio-app\/gradio\/blob\/main\/js\/README.md",
+    "relevant_chunk_ids":[
+      1062
+    ]
+  },
+  {
+    "question":"What do the labels '0' and '1' signify in the movie reviews?",
+    "ground_truth_answer":"'0' denotes a negative review, while '1' corresponds to a positive one.",
+    "source":"huggingface\/course\/blob\/main\/chapters\/en\/chapter7\/3.mdx",
+    "relevant_chunk_ids":[
+      1155
+    ]
+  },
+  {
+    "question":"How can I customize the normalizer of a Tokenizer?",
+    "ground_truth_answer":"You can customize its normalizer by just changing the corresponding attribute.",
+    "source":"huggingface\/tokenizers\/blob\/main\/docs\/source-doc-builder\/pipeline.mdx",
+    "relevant_chunk_ids":[
+      194
+    ]
+  },
+  {
+    "question":"How can I check if the huggingface-cli is correctly installed?",
+    "ground_truth_answer":"You can check that the CLI is correctly setup by running the command `huggingface-cli --help`, which will display a list of all the options available in the CLI.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/cli.md",
+    "relevant_chunk_ids":[
+      943
+    ]
+  },
+  {
+    "question":"What is the purpose of the BART model?",
+    "ground_truth_answer":"BART is designed for denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ru.md",
+    "relevant_chunk_ids":[
+      78
+    ]
+  },
+  {
+    "question":"What are the possible values for the `column_type` field in descriptive statistics?",
+    "ground_truth_answer":"The possible values for the `column_type` field are: `class_label`, `float`, `int`, `string_label`, `string_text`, and `bool`.",
+    "source":"huggingface\/datasets-server\/blob\/main\/services\/worker\/README.md",
+    "relevant_chunk_ids":[
+      34
+    ]
+  },
+  {
+    "question":"What are the two common ways to represent a graph?",
+    "ground_truth_answer":"The two common ways to represent a graph are as the set of all its edges (possibly complemented with the set of all its nodes) or as the adjacency matrix between all its nodes.",
+    "source":"huggingface\/blog\/blob\/main\/intro-graphml.md",
+    "relevant_chunk_ids":[
+      1623
+    ]
+  },
+  {
+    "question":"What is the purpose of the softmax operation in the context of neural networks?",
+    "ground_truth_answer":"The softmax operation is used to map the logit vector to a probability distribution over all words.",
+    "source":"huggingface\/blog\/blob\/main\/encoder-decoder.md",
+    "relevant_chunk_ids":[
+      1635
+    ]
+  },
+  {
+    "question":"\uc5b4\ub5a4 Python \ubc84\uc804\uc5d0\uc11c \ud83e\udd17 Transformers\ub97c \uc124\uce58\ud560 \uc218 \uc788\ub098\uc694?",
+    "ground_truth_answer":"Python 3.8+\uc5d0\uc11c \ud83e\udd17 Transformers\ub97c \uc124\uce58\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ko.md",
+    "relevant_chunk_ids":[
+      1497
+    ]
+  },
+  {
+    "question":"How do you download a single file using the huggingface-cli?",
+    "ground_truth_answer":"To download a single file from a repo, provide the repo_id and filename as follows: `huggingface-cli download gpt2 config.json`.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/cli.md",
+    "relevant_chunk_ids":[
+      945
+    ]
+  },
+  {
+    "question":"What is the main difference between TPU Nodes and TPU VMs?",
+    "ground_truth_answer":"The main difference is that when you use a TPU Node, you are indirectly accessing a remote TPU and need a separate VM to initialize your network and data pipeline, while with a TPU VM, you connect directly to the machine that the TPU is attached to, making it easier to work with your data pipeline.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_tpu_tf.md",
+    "relevant_chunk_ids":[
+      9
+    ]
+  },
+  {
+    "question":"What is the purpose of gradient accumulation in training a model?",
+    "ground_truth_answer":"The gradient accumulation method aims to calculate gradients in smaller increments instead of computing them for the entire batch at once, allowing for an increase in the effective batch size beyond the limitations imposed by the GPU's memory capacity.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_gpu_one.md",
+    "relevant_chunk_ids":[
+      1979
+    ]
+  },
+  {
+    "question":"How can I install the training dependencies for the Flax training example?",
+    "ground_truth_answer":"You can install the training dependencies by running the command: `pip install -U -r requirements_flax.txt`.",
+    "source":"huggingface\/diffusers\/blob\/main\/examples\/research_projects\/multi_token_textual_inversion\/README.md",
+    "relevant_chunk_ids":[
+      1359
+    ]
+  },
+  {
+    "question":"What are the currently supported adapter types in the PEFT low level API?",
+    "ground_truth_answer":"The currently supported adapter types are LoRA, AdaLoRA, and IA3.",
+    "source":"huggingface\/peft\/blob\/main\/docs\/source\/developer_guides\/low_level_api.md",
+    "relevant_chunk_ids":[
+      1292
+    ]
+  },
+  {
+    "question":"What mode is enabled in the Optimum pipeline to leverage AMX instructions on the r7iz instance?",
+    "ground_truth_answer":"bfloat16 mode",
+    "source":"huggingface\/blog\/blob\/main\/intel-sapphire-rapids-inference.md",
+    "relevant_chunk_ids":[
+      1325
+    ]
+  },
+  {
+    "question":"How can I get information about my environment when using Transformers?",
+    "ground_truth_answer":"You can get all the information about your environment by typing `transformers-cli env` in your terminal.",
+    "source":"huggingface\/course\/blob\/main\/chapters\/en\/chapter8\/5.mdx",
+    "relevant_chunk_ids":[
+      1455
+    ]
+  },
+  {
+    "question":"How can I create a custom constraint for the model's generation process?",
+    "ground_truth_answer":"You can create a custom constraint by defining a sub-class of the `Constraint` abstract interface class and following its requirements, then inputting it into the `constraints` keyword argument.",
+    "source":"huggingface\/blog\/blob\/main\/constrained-beam-search.md",
+    "relevant_chunk_ids":[
+      858
+    ]
+  },
+  {
+    "question":"What are the average scores reported in the original GLUE paper?",
+    "ground_truth_answer":"The average scores reported in the original GLUE paper ranged from 58 to 64%, depending on the model used.",
+    "source":"huggingface\/datasets\/blob\/main\/metrics\/glue\/README.md",
+    "relevant_chunk_ids":[
+      1561
+    ]
+  },
+  {
+    "question":"How can I download only JSON configuration files from a repository using snapshot_download?",
+    "ground_truth_answer":"You can use the `allow_patterns` parameter to specify that you only want to download JSON configuration files, like this: `snapshot_download(repo_id='lysandre\/arxiv-nlp', allow_patterns='*.json')`.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/download.md",
+    "relevant_chunk_ids":[
+      294
+    ]
+  },
+  {
+    "question":"What is the purpose of the `DataCollatorSpeechSeq2SeqWithPadding` class?",
+    "ground_truth_answer":"The `DataCollatorSpeechSeq2SeqWithPadding` class is designed to pad the labels in each batch to the maximum length and replace padding with `-100` so they're ignored by the loss function.",
+    "source":"huggingface\/peft\/blob\/main\/docs\/source\/task_guides\/int8-asr.md",
+    "relevant_chunk_ids":[
+      1831
+    ]
+  },
+  {
+    "question":"What format should the training data be converted into for Megatron?",
+    "ground_truth_answer":"The training data requires preprocessing into a loose json format, with one json containing a text sample per line.",
+    "source":"huggingface\/transformers\/blob\/main\/examples\/research_projects\/codeparrot\/README.md",
+    "relevant_chunk_ids":[
+      1666
+    ]
+  },
+  {
+    "question":"What is a major drawback of using Mixture of Experts in Transformer models?",
+    "ground_truth_answer":"It requires staggering amounts of GPU memory - almost an order of magnitude larger than its dense equivalent.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_gpu_one.md",
+    "relevant_chunk_ids":[
+      1989
+    ]
+  },
+  {
+    "question":"What should you do if you need to build CUDA extensions for PyTorch?",
+    "ground_truth_answer":"You may need to pre-build some components, as the prebuilt pip and conda builds come with the CUDA toolkit that is insufficient for building CUDA extensions.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_gpu_one.md",
+    "relevant_chunk_ids":[
+      1988
+    ]
+  },
+  {
+    "question":"What has changed regarding the Paid tier of the Inference API service?",
+    "ground_truth_answer":"The Paid tier of the Inference API service is being sunsetted, and the Inference API will still be available for everyone to use for free.",
+    "source":"huggingface\/blog\/blob\/main\/pricing-update.md",
+    "relevant_chunk_ids":[
+      1246
+    ]
+  },
+  {
+    "question":"What class is responsible for preprocessing the input speech in the Speech2Text2 model?",
+    "ground_truth_answer":"The [`Wav2Vec2FeatureExtractor`] class is responsible for preprocessing the input speech.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/speech_to_text_2.md",
+    "relevant_chunk_ids":[
+      1397
+    ]
+  },
+  {
+    "question":"How many unique classes are present in the UCF101 dataset subset?",
+    "ground_truth_answer":"There are 10 unique classes.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/video_classification.md",
+    "relevant_chunk_ids":[
+      496
+    ]
+  },
+  {
+    "question":"What does Librarian-Bot do with the language predictions generated by the fastText model?",
+    "ground_truth_answer":"Librarian-Bot takes the language predictions generated by Meta's fastText model and opens pull requests to add this information to the metadata of each respective dataset.",
+    "source":"huggingface\/blog\/blob\/main\/huggy-lingo.md",
+    "relevant_chunk_ids":[
+      275
+    ]
+  },
+  {
+    "question":"What is the maximum number of words that can be processed in the training data?",
+    "ground_truth_answer":"The maximum number of words is 31.",
+    "source":"huggingface\/blog\/blob\/main\/Lora-for-sequence-classification-with-Roberta-Llama-Mistral.md",
+    "relevant_chunk_ids":[
+      1216
+    ]
+  },
+  {
+    "question":"What is the paper associated with Inception-ResNet-V2?",
+    "ground_truth_answer":"Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/docs\/models.md",
+    "relevant_chunk_ids":[
+      996
+    ]
+  },
+  {
+    "question":"How can I accelerate inference for Stable Diffusion using Bfloat16?",
+    "ground_truth_answer":"You can accelerate inference for Stable Diffusion using Bfloat16 by utilizing the Intel Extension for PyTorch with the provided script 'inference_bf16.py', which is designed to support standard Stable Diffusion models with Bfloat16 support.",
+    "source":"huggingface\/diffusers\/blob\/main\/examples\/research_projects\/intel_opts\/README.md",
+    "relevant_chunk_ids":[
+      1447
+    ]
+  },
+  {
+    "question":"What training resources are recommended for training the res2next50 model?",
+    "ground_truth_answer":"4x Titan Xp GPUs",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/docs\/models\/res2next.md",
+    "relevant_chunk_ids":[
+      457
+    ]
+  },
+  {
+    "question":"How can I downsample a dataset using the Hugging Face Datasets library?",
+    "ground_truth_answer":"You can downsample a dataset in \ud83e\udd17 Datasets using the `Dataset.train_test_split()` function. For example, you can set the training size to 10,000 examples and the test size to 10% of that with the following code: `downsampled_dataset = lm_datasets['train'].train_test_split(train_size=train_size, test_size=test_size, seed=42)`.",
+    "source":"huggingface\/course\/blob\/main\/chapters\/en\/chapter7\/3.mdx",
+    "relevant_chunk_ids":[
+      1163
+    ]
+  },
+  {
+    "question":"What configuration can be used to preload data into pinned memory on the CPU for faster transfers to GPU memory?",
+    "ground_truth_answer":"`DataLoader(pin_memory=True, ...)` ensures the data gets preloaded into the pinned memory on CPU and typically leads to much faster transfers from CPU to GPU memory.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_gpu_one.md",
+    "relevant_chunk_ids":[
+      1984
+    ]
+  },
+  {
+    "question":"What is the fastest approach to load a TP-pre-sharded checkpoint using DeepSpeed-Inference?",
+    "ground_truth_answer":"The fastest approach is to use a TP-pre-sharded checkpoint that takes only ~1min to load.",
+    "source":"huggingface\/blog\/blob\/main\/bloom-inference-pytorch-scripts.md",
+    "relevant_chunk_ids":[
+      1798
+    ]
+  },
+  {
+    "question":"What training resources are required to train the cspresnext50 model?",
+    "ground_truth_answer":"1x GPU",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/docs\/models\/csp-resnext.md",
+    "relevant_chunk_ids":[
+      1827
+    ]
+  },
+  {
+    "question":"How do I load a pretrained RegNetY model for image classification?",
+    "ground_truth_answer":"To load a pretrained model, use the following code: `import timm; model = timm.create_model('regnety_002', pretrained=True); model.eval()`.",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/regnety.mdx",
+    "relevant_chunk_ids":[
+      508
+    ]
+  },
+  {
+    "question":"What is the purpose of the notebook titled '01 Getting started with PyTorch'?",
+    "ground_truth_answer":"Getting started end-to-end example on how to fine-tune a pre-trained Hugging Face Transformer for Text-Classification using PyTorch.",
+    "source":"huggingface\/hub-docs\/blob\/main\/docs\/sagemaker\/reference.md",
+    "relevant_chunk_ids":[
+      1904
+    ]
+  },
+  {
+    "question":"How can I visually compare the performance of multiple models using the Hugging Face library?",
+    "ground_truth_answer":"You can use the `radar_plot()` function by feeding it a list of results from multiple models as dictionaries, along with their names, to visually compare their performance based on various metrics.",
+    "source":"huggingface\/evaluate\/blob\/main\/docs\/source\/a_quick_tour.mdx",
+    "relevant_chunk_ids":[
+      1972
+    ]
+  },
+  {
+    "question":"What is the purpose of the WavLM model?",
+    "ground_truth_answer":"WavLM is designed for large-scale self-supervised pre-training for full stack speech processing.",
+    "source":"huggingface\/transformers\/blob\/main\/README.md",
+    "relevant_chunk_ids":[
+      1612
+    ]
+  },
+  {
+    "question":"Who are the authors of the FLAN-UL2 model?",
+    "ground_truth_answer":"The authors of the FLAN-UL2 model are Hyung Won Chung, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Eric Li, Xuezhi Wang, Mostafa Dehghani, Siddhartha Brahma, Albert Webson, Shixiang Shane Gu, Zhuyun Dai, Mirac Suzgun, Xinyun Chen, Aakanksha Chowdhery, Sharan Narang, Gaurav Mishra, Adams Yu, Vincent Zhao, Yanping Huang, Andrew Dai, Hongkun Yu, Slav Petrov, Ed H. Chi, Jeff Dean, Jacob Devlin, Adam Roberts, Denny Zhou, Quoc V. Le, and Jason Wei.",
+    "source":"huggingface\/transformers\/blob\/main\/README_zh-hans.md",
+    "relevant_chunk_ids":[
+      544
+    ]
+  },
+  {
+    "question":"What languages are currently available in the Hugging Face course?",
+    "ground_truth_answer":"The available languages in the Hugging Face course are Russian, Thai, Turkish, Vietnamese, Chinese (simplified), and Chinese (traditional).",
+    "source":"huggingface\/course\/blob\/main\/README.md",
+    "relevant_chunk_ids":[
+      304
+    ]
+  },
+  {
+    "question":"How do you rename the 'target' column to 'label' in a dataset using Hugging Face standards?",
+    "ground_truth_answer":"You can rename the 'target' column to 'label' by using the rename_column method: roberta_tokenized_datasets = roberta_tokenized_datasets.rename_column('target', 'label').",
+    "source":"huggingface\/blog\/blob\/main\/Lora-for-sequence-classification-with-Roberta-Llama-Mistral.md",
+    "relevant_chunk_ids":[
+      1217
+    ]
+  },
+  {
+    "question":"What is the role of the model in the tokenization process?",
+    "ground_truth_answer":"The role of the model is to split your 'words' into tokens, using the rules it has learned, and to map those tokens to their corresponding IDs in the vocabulary of the model.",
+    "source":"huggingface\/tokenizers\/blob\/main\/docs\/source-doc-builder\/pipeline.mdx",
+    "relevant_chunk_ids":[
+      197
+    ]
+  },
+  {
+    "question":"What is the focus of the entry related to 'financial' in the table?",
+    "ground_truth_answer":"The focus is on stock market price news.",
+    "source":"huggingface\/blog\/blob\/main\/bertopic.md",
+    "relevant_chunk_ids":[
+      1382
+    ]
+  },
+  {
+    "question":"How do you prepare a TensorFlow dataset for training with DistilBERT?",
+    "ground_truth_answer":"You can prepare a TensorFlow dataset for training with DistilBERT by using the `prepare_tf_dataset` method of the model, passing in the tokenized dataset, setting `shuffle` to True for the training set, and specifying the `batch_size` and `collate_fn`.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/sequence_classification.md",
+    "relevant_chunk_ids":[
+      1742
+    ]
+  },
+  {
+    "question":"What is the deadline for applying to the Student Ambassador Program?",
+    "ground_truth_answer":"The deadline for applying to the Student Ambassador Program is June 13, 2022.",
+    "source":"huggingface\/blog\/blob\/main\/ambassadors.md",
+    "relevant_chunk_ids":[
+      1100
+    ]
+  },
+  {
+    "question":"What new layout component has been introduced in this version of Gradio?",
+    "ground_truth_answer":"The new layout component introduced is the Accordion.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      756
+    ]
+  },
+  {
+    "question":"What should be considered when training large models on a GPU?",
+    "ground_truth_answer":"When training large models, two aspects should be considered at the same time: data throughput\/training time and model performance.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/perf_train_gpu_one.md",
+    "relevant_chunk_ids":[
+      1978
+    ]
+  },
+  {
+    "question":"How do I initialize a trainer for training transformers on Habana's Gaudi processors?",
+    "ground_truth_answer":"To initialize a trainer for training transformers on Habana's Gaudi processors, you should use the `GaudiTrainer` class. First, import it with `from optimum.habana import GaudiTrainer, GaudiTrainingArguments`. Then, define your training arguments using `GaudiTrainingArguments`, and initialize the trainer with `GaudiTrainer(model=model, args=training_args, train_dataset=train_dataset)`. Finally, call `trainer.train()` to start the training.",
+    "source":"huggingface\/optimum\/blob\/main\/docs\/source\/quicktour.mdx",
+    "relevant_chunk_ids":[
+      1146
+    ]
+  },
+  {
+    "question":"What was fixed in the Audio, Image, and Video components?",
+    "ground_truth_answer":"Styling issues were fixed with Audio, Image, and Video components.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      641
+    ]
+  },
+  {
+    "question":"What method is used to generate text with the GPT NeoX Japanese model?",
+    "ground_truth_answer":"The `generate()` method can be used to generate text using the GPT NeoX Japanese model.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/gpt_neox_japanese.md",
+    "relevant_chunk_ids":[
+      1928
+    ]
+  },
+  {
+    "question":"What are the shapes of the decoder input vectors and decoder logits?",
+    "ground_truth_answer":"The shape of decoder input vectors is torch.Size([1, 5, 512]) and the shape of decoder logits is torch.Size([1, 5, 58101]).",
+    "source":"huggingface\/blog\/blob\/main\/encoder-decoder.md",
+    "relevant_chunk_ids":[
+      1657
+    ]
+  },
+  {
+    "question":"What is the purpose of the discount rate gamma in reinforcement learning?",
+    "ground_truth_answer":"The discount rate gamma is defined to be between 0 and 1, and it determines how much the agent cares about long-term versus short-term rewards. A larger gamma means the agent cares more about long-term rewards, while a smaller gamma means the agent cares more about short-term rewards.",
+    "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit1\/rl-framework.mdx",
+    "relevant_chunk_ids":[
+      1945
+    ]
+  },
+  {
+    "question":"What is the expected number of very negative messages received daily?",
+    "ground_truth_answer":"Around 500.",
+    "source":"huggingface\/blog\/blob\/main\/supercharge-customer-service-with-machine-learning.md",
+    "relevant_chunk_ids":[
+      488
+    ]
+  },
+  {
+    "question":"What do you need to do before using the Stable Diffusion model?",
+    "ground_truth_answer":"You need to accept the model license in order to download and use the weights.",
+    "source":"huggingface\/blog\/blob\/main\/stable_diffusion.md",
+    "relevant_chunk_ids":[
+      1870
+    ]
+  },
+  {
+    "question":"What is the purpose of creating multiple TFRecord shards when tokenizing the dataset?",
+    "ground_truth_answer":"Having the data splits spread across multiple TFRecord shards helps with massively parallel processing as opposed to having each split in single TFRecord files.",
+    "source":"huggingface\/blog\/blob\/main\/tf_tpu.md",
+    "relevant_chunk_ids":[
+      1130
+    ]
+  },
+  {
+    "question":"\u5982\u4f55\u8bbe\u7f6e\u5143\u7d20\u7684\u5706\u89d2\u5f27\u5ea6\uff1f",
+    "ground_truth_answer":"\u53ef\u4ee5\u901a\u8fc7\u8bbe\u7f6e `radius_size` \u53c2\u6570\u6765\u8c03\u6574\u5143\u7d20\u7684\u5706\u89d2\u5f27\u5ea6\u3002\u5728\u9ed8\u8ba4\u4e3b\u9898\u4e2d\uff0c\u6b64\u503c\u8bbe\u7f6e\u4e3a `gradio.themes.sizes.radius_md`\u3002",
+    "source":"gradio-app\/gradio\/blob\/main\/guides\/cn\/07_other-tutorials\/theming-guide.md",
+    "relevant_chunk_ids":[
+      429
+    ]
+  },
+  {
+    "question":"How can I compute accuracy and F1 score for my model's predictions using the MRPC dataset?",
+    "ground_truth_answer":"To compute accuracy and F1 score for your model's predictions using the MRPC dataset, you pass the model\u2019s predictions and the ground truth labels to the predefined metrics, which are accuracy and F1 score.",
+    "source":"huggingface\/course\/blob\/main\/subtitles\/en\/raw\/chapter3\/03e_keras-metrics.md",
+    "relevant_chunk_ids":[
+      1940
+    ]
+  },
+  {
+    "question":"What is the purpose of dataset streaming in training sahajBERT?",
+    "ground_truth_answer":"Dataset streaming allows participants to train the model nearly as soon as they join the network by downloading and transforming examples in parallel to the training, thus optimizing time and storage resources.",
+    "source":"huggingface\/blog\/blob\/main\/collaborative-training.md",
+    "relevant_chunk_ids":[
+      1789
+    ]
+  },
+  {
+    "question":"What models were tried for zero-shot and few-shot experimentations in extracting needs from tweets?",
+    "ground_truth_answer":"For zero-shot experimentations, the model tried was xlm-roberta-large-xnli, and for few-shot experimentations, the model tried was convbert-base-turkish-mc4-cased-allnli_tr.",
+    "source":"huggingface\/blog\/blob\/main\/using-ml-for-disasters.md",
+    "relevant_chunk_ids":[
+      1309
+    ]
+  },
+  {
+    "question":"What is the purpose of using GPS collars in the study of the unicorn herd?",
+    "ground_truth_answer":"The GPS collars were used to track the animals as they moved around the mountain and the surrounding area.",
+    "source":"huggingface\/blog\/blob\/main\/introducing-csearch.md",
+    "relevant_chunk_ids":[
+      327
+    ]
+  },
+  {
+    "question":"What is the purpose of the DummyInputGenerator classes?",
+    "ground_truth_answer":"The goal of DummyInputGenerator classes is to make the generation of dummy inputs easy and re-usable for tasks such as tracing, exporting a model to some backend, and testing model outputs.",
+    "source":"huggingface\/optimum\/blob\/main\/docs\/source\/utils\/dummy_input_generators.mdx",
+    "relevant_chunk_ids":[
+      409
+    ]
+  },
+  {
+    "question":"What should be included in the tokenization test files for a model?",
+    "ground_truth_answer":"The tokenization test files should contain a couple of hard-coded integration tests.",
+    "source":"huggingface\/transformers\/blob\/main\/templates\/adding_a_new_model\/ADD_NEW_MODEL_PROPOSAL_TEMPLATE.md",
+    "relevant_chunk_ids":[
+      392
+    ]
+  },
+  {
+    "question":"What is the major drawback of greedy search in language generation?",
+    "ground_truth_answer":"The major drawback of greedy search is that it misses high probability words hidden behind a low probability word.",
+    "source":"huggingface\/blog\/blob\/main\/how-to-generate.md",
+    "relevant_chunk_ids":[
+      822
+    ]
+  },
+  {
+    "question":"How can I change the background color of a Label component in Gradio?",
+    "ground_truth_answer":"You can change the background color of a Label component by using the `color` argument, which accepts a valid CSS color name or a hexadecimal string. You can also update the color with `gr.Label.update`.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      734
+    ]
+  },
+  {
+    "question":"What was added in version 3.44.2 of Gradio?",
+    "ground_truth_answer":"In version 3.44.2 of Gradio, the basque language was added, and gr.Image() examples were allowed to take URLs.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      656
+    ]
+  },
+  {
+    "question":"How can I predict the sentiment of sentences using the learner_blurr model?",
+    "ground_truth_answer":"You can predict the sentiment of sentences using the learner_blurr model by calling the `predict` method with a list of sentences. For example, you can use `probs = learner_blurr.predict(sentences)` where `sentences` is a list of strings.",
+    "source":"huggingface\/blog\/blob\/main\/fastai.md",
+    "relevant_chunk_ids":[
+      408
+    ]
+  },
+  {
+    "question":"What is the purpose of the LayoutLM model?",
+    "ground_truth_answer":"LayoutLM is designed for the pre-training of text and layout for document image understanding.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ru.md",
+    "relevant_chunk_ids":[
+      90
+    ]
+  },
+  {
+    "question":"What new feature was added in version 0.1.5 of the ImageEditor?",
+    "ground_truth_answer":"Allows individual images to be used as the initial value for ImageEditor.",
+    "source":"gradio-app\/gradio\/blob\/main\/js\/imageeditor\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      282
+    ]
+  },
+  {
+    "question":"What factors should be evaluated when picking a dataset for training an NLP system?",
+    "ground_truth_answer":"Two aspects should be evaluated when picking a dataset: Quality and Size.",
+    "source":"huggingface\/blog\/blob\/main\/supercharge-customer-service-with-machine-learning.md",
+    "relevant_chunk_ids":[
+      475
+    ]
+  },
+  {
+    "question":"What is the path to the hyperparameter config file used for training the agents in the SoccerTwos environment?",
+    "ground_truth_answer":".\/config\/poca\/SoccerTwos.yaml",
+    "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit7\/hands-on.mdx",
+    "relevant_chunk_ids":[
+      139
+    ]
+  },
+  {
+    "question":"What does the main function do in the provided code?",
+    "ground_truth_answer":"The main function tokenizes words using the Viterbi algorithm, computing the best segmentation of each substring of the word and storing the results in a variable named `best_segmentations`.",
+    "source":"huggingface\/course\/blob\/main\/chapters\/en\/chapter6\/7.mdx",
+    "relevant_chunk_ids":[
+      1953
+    ]
+  },
+  {
+    "question":"How can I access the number of videos in the validation dataset using PyTorchVideo?",
+    "ground_truth_answer":"You can access the number of videos in the validation dataset using the `num_videos` argument, like this: `val_dataset.num_videos`.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/video_classification.md",
+    "relevant_chunk_ids":[
+      499
+    ]
+  },
+  {
+    "question":"How can I contribute a new model to the repository?",
+    "ground_truth_answer":"You can contribute a new model by following the detailed guide and templates available in the 'templates' folder of the repository. Additionally, you should check the contributing guidelines and contact the maintainers or open an issue to collect feedback before starting your PR.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ru.md",
+    "relevant_chunk_ids":[
+      107
+    ]
+  },
+  {
+    "question":"What type of tasks can you fine-tune a pretrained model for according to the documentation?",
+    "ground_truth_answer":"You can fine-tune a pretrained model on token classification tasks (NER, PoS), question answering (SQUAD), multiple choice (SWAG), and translation (WMT).",
+    "source":"huggingface\/transformers\/blob\/main\/notebooks\/README.md",
+    "relevant_chunk_ids":[
+      236
+    ]
+  },
+  {
+    "question":"How do you load the ViLT model for question answering?",
+    "ground_truth_answer":"You can load the ViLT model for question answering using the following code: `model = ViltForQuestionAnswering.from_pretrained(model_checkpoint, num_labels=len(id2label), id2label=id2label, label2id=label2id)`.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/visual_question_answering.md",
+    "relevant_chunk_ids":[
+      1469
+    ]
+  },
+  {
+    "question":"How can I compute a metric in a distributed environment using \ud83e\udd17 Evaluate?",
+    "ground_truth_answer":"In a distributed environment, you can compute a metric by allowing the first node to access the predictions and references stored on all other nodes. The predictions and references are computed and provided to the metric separately for each node and temporarily stored in an Apache Arrow table. Once ready, the first node can call `compute()` to perform the final metric evaluation.",
+    "source":"huggingface\/evaluate\/blob\/main\/docs\/source\/a_quick_tour.mdx",
+    "relevant_chunk_ids":[
+      1969
+    ]
+  },
+  {
+    "question":"What is the purpose of using machine learning in the context of the Hugging Face Hub?",
+    "ground_truth_answer":"The purpose of using machine learning is to detect the language of Hub datasets with no language metadata and to use librarian-bots to make pull requests to add this metadata.",
+    "source":"huggingface\/blog\/blob\/main\/huggy-lingo.md",
+    "relevant_chunk_ids":[
+      271
+    ]
+  },
+  {
+    "question":"How is the variable 'u' calculated in the context of finding the Top-u queries?",
+    "ground_truth_answer":"u is calculated as the minimum of the product of sampling_factor and log_L_Q, and L_Q.",
+    "source":"huggingface\/blog\/blob\/main\/informer.md",
+    "relevant_chunk_ids":[
+      248
+    ]
+  },
+  {
+    "question":"What happens if one or several peers disconnect from the training procedure during distributed training?",
+    "ground_truth_answer":"In this case, we only suffer a minor setback of training: the contribution of these peers gets deducted from the currently accumulated batch size, but other participants will compensate for that with their gradients.",
+    "source":"huggingface\/blog\/blob\/main\/collaborative-training.md",
+    "relevant_chunk_ids":[
+      1785
+    ]
+  },
+  {
+    "question":"What flag should be used if the dataset contains samples with no possible answers?",
+    "ground_truth_answer":"--version_2_with_negative",
+    "source":"huggingface\/optimum\/blob\/main\/examples\/onnxruntime\/training\/question-answering\/README.md",
+    "relevant_chunk_ids":[
+      1035
+    ]
+  },
+  {
+    "question":"What is the purpose of the `StableDiffusionPromptGeneratorTool` in the gradio_tools example?",
+    "ground_truth_answer":"The `StableDiffusionPromptGeneratorTool` is used to create a good prompt for stable diffusion.",
+    "source":"gradio-app\/gradio\/blob\/main\/guides\/08_gradio-clients-and-lite\/gradio-and-llm-agents.md",
+    "relevant_chunk_ids":[
+      1956
+    ]
+  },
+  {
+    "question":"What is the purpose of data augmentation in image datasets?",
+    "ground_truth_answer":"Data augmentation introduces random variations to an image without changing the meaning of the data.",
+    "source":"huggingface\/datasets\/blob\/main\/docs\/source\/use_dataset.mdx",
+    "relevant_chunk_ids":[
+      1245
+    ]
+  },
+  {
+    "question":"What command is used to install all the testing requirements?",
+    "ground_truth_answer":"pip install -e .[testing]",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/tests\/README.md",
+    "relevant_chunk_ids":[
+      1024
+    ]
+  },
+  {
+    "question":"How can I compute the Spearman correlation coefficient and its p-value using the evaluate library?",
+    "ground_truth_answer":"You can compute the Spearman correlation coefficient and its p-value using the evaluate library by loading the 'spearmanr' metric and calling the compute method with the return_pvalue parameter set to True. For example: `results = spearmanr_metric.compute(references=[1, 2, 3, 4, 5], predictions=[10, 9, 2.5, 6, 4], return_pvalue=True)`.",
+    "source":"huggingface\/evaluate\/blob\/main\/metrics\/spearmanr\/README.md",
+    "relevant_chunk_ids":[
+      1851
+    ]
+  },
+  {
+    "question":"What new features does the ImageEditor component provide?",
+    "ground_truth_answer":"The ImageEditor component provides simple editing capabilities, including setting background images from various sources, cropping images with an improved UI, painting and erasing on images, supporting layers, flexible access to data, and full customizability of features.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      603
+    ]
+  },
+  {
+    "question":"What version of the `diffusers` library was used in the benchmarks?",
+    "ground_truth_answer":"0.15.1",
+    "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/optimization\/tome.md",
+    "relevant_chunk_ids":[
+      460
+    ]
+  },
+  {
+    "question":"What new feature has been added to the Model3D output component?",
+    "ground_truth_answer":"A download button has been added to the model3d component itself, eliminating the need for an additional file output component for model3d file downloads.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      724
+    ]
+  },
+  {
+    "question":"What can you do to improve the model after training it with RLHF?",
+    "ground_truth_answer":"You can start iterating on your dataset and model training setup to see if there are ways to improve the model, such as adding other datasets or applying better filters to the existing one, trying different model sizes and architecture for the reward model, or training for longer.",
+    "source":"huggingface\/blog\/blob\/main\/stackllama.md",
+    "relevant_chunk_ids":[
+      419
+    ]
+  },
+  {
+    "question":"What parameter was added to `gr.make_waveform()` to animate the overlayed waveform?",
+    "ground_truth_answer":"The parameter `animate` was added to `gr.make_waveform()`, which is `False` by default.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      679
+    ]
+  },
+  {
+    "question":"What tasks are primarily designed for models that use the PrefixLM strategy?",
+    "ground_truth_answer":"Models that solely use the PrefixLM strategy are mainly designed for image captioning or visual question-answering downstream tasks.",
+    "source":"huggingface\/blog\/blob\/main\/vision_language_pretraining.md",
+    "relevant_chunk_ids":[
+      1195
+    ]
+  },
+  {
+    "question":"What is the main advantage of using decoupled embeddings in the RemBERT model?",
+    "ground_truth_answer":"Decoupled embeddings provide increased modeling flexibility, allowing for significantly improved efficiency of parameter allocation in the input embedding of multilingual models, leading to better performance on standard natural language understanding tasks with the same number of parameters during fine-tuning.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/rembert.md",
+    "relevant_chunk_ids":[
+      148
+    ]
+  },
+  {
+    "question":"How can I load a pretrained MnasNet model for evaluation?",
+    "ground_truth_answer":"You can load a pretrained MnasNet model for evaluation by using the following code: `import timm; model = timm.create_model('mnasnet_100', pretrained=True); model.eval()`.",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/mnasnet.mdx",
+    "relevant_chunk_ids":[
+      1865
+    ]
+  },
+  {
+    "question":"What is the purpose of the LxmertForQuestionAnswering class?",
+    "ground_truth_answer":"The LxmertForQuestionAnswering class is used for the question answering task.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/lxmert.md",
+    "relevant_chunk_ids":[
+      191
+    ]
+  },
+  {
+    "question":"What is the URL scheme for using HfFileSystem with a library that integrates fsspec?",
+    "ground_truth_answer":"The URL scheme is: hf:\/\/[<repo_type_prefix>]<repo_id>[@<revision>]\/<path\/in\/repo>, where the repo_type_prefix is 'datasets\/' for datasets, 'spaces\/' for spaces, and models don't need a prefix in the URL.",
+    "source":"huggingface\/huggingface_hub\/blob\/main\/docs\/source\/en\/guides\/hf_file_system.md",
+    "relevant_chunk_ids":[
+      1042
+    ]
+  },
+  {
+    "question":"What improvements were made to markdown support in version 3.41.0 of Gradio?",
+    "ground_truth_answer":"The improvements include better support for markdown in `gr.Markdown` and `gr.Dataframe`, including syntax highlighting and Github Flavoured Markdown, as well as more consistent markdown behaviour and styling.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      664
+    ]
+  },
+  {
+    "question":"What significant advancements have been made in multi-modal models recently?",
+    "ground_truth_answer":"There have been incredible advances in multi-modal models in recent years, with vision-language models making the most significant leap in performance and the variety of use cases and applications.",
+    "source":"huggingface\/blog\/blob\/main\/vision_language_pretraining.md",
+    "relevant_chunk_ids":[
+      1206
+    ]
+  },
+  {
+    "question":"What datasets were primarily used to fine-tune the CLIP model?",
+    "ground_truth_answer":"The CLIP model was primarily fine-tuned with the RSICD dataset, along with the UCM Dataset and the Sydney dataset.",
+    "source":"huggingface\/blog\/blob\/main\/fine-tune-clip-rsicd.md",
+    "relevant_chunk_ids":[
+      214
+    ]
+  },
+  {
+    "question":"What is ZenML and who is it built for?",
+    "ground_truth_answer":"ZenML is an extensible, open-source MLOps framework for creating portable, production-ready MLOps pipelines. It's built for Data Scientists, ML Engineers, and MLOps Developers to collaborate as they develop to production.",
+    "source":"huggingface\/hub-docs\/blob\/main\/docs\/hub\/spaces-sdks-docker-zenml.md",
+    "relevant_chunk_ids":[
+      424
+    ]
+  },
+  {
+    "question":"What format do all model names use in the multilingual models section?",
+    "ground_truth_answer":"All model names use the following format: `Helsinki-NLP\/opus-mt-{src}-{tgt}`.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/marian.md",
+    "relevant_chunk_ids":[
+      467
+    ]
+  },
+  {
+    "question":"How do I start the web server for the Express.js application?",
+    "ground_truth_answer":"You can start the web server by running the command `npm run start`.",
+    "source":"huggingface\/blog\/blob\/main\/text-to-webapp.md",
+    "relevant_chunk_ids":[
+      862
+    ]
+  },
+  {
+    "question":"How can I finetune a pre-trained model?",
+    "ground_truth_answer":"You can finetune any of the pre-trained models just by changing the classifier (the last layer) and writing a training loop or adapting timm's training script to use your dataset.",
+    "source":"huggingface\/pytorch-image-models\/blob\/main\/docs\/models\/regnety.md",
+    "relevant_chunk_ids":[
+      343
+    ]
+  },
+  {
+    "question":"What is the purpose of the FLAVA model?",
+    "ground_truth_answer":"FLAVA is a foundational language and vision alignment model.",
+    "source":"huggingface\/transformers\/blob\/main\/README_ko.md",
+    "relevant_chunk_ids":[
+      1508
+    ]
+  },
+  {
+    "question":"What are the available models for FrugalScore and their corresponding methods?",
+    "ground_truth_answer":"The available models for FrugalScore include: 1. moussaKam\/frugalscore_tiny_bert-base_bert-score (BERT-tiny, BERT-Base, BERTScore) 2. moussaKam\/frugalscore_small_bert-base_bert-score (BERT-small, BERT-Base, BERTScore) 3. moussaKam\/frugalscore_medium_bert-base_bert-score (BERT-medium, BERT-Base, BERTScore) 4. moussaKam\/frugalscore_tiny_roberta_bert-score (BERT-tiny, RoBERTa-Large, BERTScore) 5. moussaKam\/frugalscore_small_roberta_bert-score (BERT-small, RoBERTa-Large, BERTScore) 6. moussaKam\/frugalscore_medium_roberta_bert-score (BERT-medium, RoBERTa-Large, BERTScore) 7. moussaKam\/frugalscore_tiny_deberta_bert-score (BERT-tiny, DeBERTa-XLarge, BERTScore) 8. moussaKam\/frugalscore_small_deberta_bert-score (BERT-small, DeBERTa-XLarge, BERTScore) 9. moussaKam\/frugalscore_medium_deberta_bert-score (BERT-medium, DeBERTa-XLarge, BERTScore) 10. moussaKam\/frugalscore_tiny_bert-base_mover-score (BERT-tiny, BERT-Base, MoverScore) 11. moussaKam\/frugalscore_small_bert-base_mover-score (BERT-small, BERT-Base, MoverScore) 12. moussaKam\/frugalscore_medium_bert-base_mover-score (BERT-medium, BERT-Base, MoverScore).",
+    "source":"huggingface\/evaluate\/blob\/main\/metrics\/frugalscore\/README.md",
+    "relevant_chunk_ids":[
+      1122
+    ]
+  },
+  {
+    "question":"What changes were made to the layout documentation?",
+    "ground_truth_answer":"Layout docs were updated by @abidlabs in PR 1263.",
+    "source":"gradio-app\/gradio\/blob\/main\/CHANGELOG.md",
+    "relevant_chunk_ids":[
+      777
+    ]
+  },
+  {
+    "question":"What is the memory capacity of each ROCm device in an AMD Instinct MI250 GPU?",
+    "ground_truth_answer":"Each ROCm device in an AMD Instinct MI250 GPU has 64 GB of High Bandwidth Memory.",
+    "source":"huggingface\/blog\/blob\/main\/huggingface-and-optimum-amd.md",
+    "relevant_chunk_ids":[
+      334
+    ]
+  },
+  {
+    "question":"How long does it take to fine-tune mBERT on the XNLI dataset using a single Tesla V100 16GB?",
+    "ground_truth_answer":"It takes 106 mins.",
+    "source":"huggingface\/transformers\/blob\/main\/examples\/pytorch\/text-classification\/README.md",
+    "relevant_chunk_ids":[
+      1426
+    ]
+  },
+  {
+    "question":"What is the recommended approach for selecting a model for fine-tuning on a specific dataset?",
+    "ground_truth_answer":"The best approach is to try out various model architectures, stay up to date with new model architectures by following experts in the field, and check well-known leaderboards.",
+    "source":"huggingface\/blog\/blob\/main\/supercharge-customer-service-with-machine-learning.md",
+    "relevant_chunk_ids":[
+      477
+    ]
+  },
+  {
+    "question":"How can I create a training and validation split from the financial_phrasebank dataset?",
+    "ground_truth_answer":"Use the `~datasets.Dataset.train_test_split` function to create a training and validation split, setting the `test_size` to 0.1. After splitting, assign the test dataset to the validation dataset and delete the test dataset.",
+    "source":"huggingface\/peft\/blob\/main\/docs\/source\/task_guides\/seq2seq-prefix-tuning.md",
+    "relevant_chunk_ids":[
+      1002
+    ]
+  },
+  {
+    "question":"What should community leaders do if they encounter behavior that is deemed inappropriate or harmful?",
+    "ground_truth_answer":"Community leaders are responsible for clarifying and enforcing the standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.",
+    "source":"huggingface\/transformers\/blob\/main\/CODE_OF_CONDUCT.md",
+    "relevant_chunk_ids":[
+      1930
+    ]
+  },
+  {
+    "question":"How can I provide a text prompt along with an image for captioning in a model?",
+    "ground_truth_answer":"You can extend image captioning by providing a text prompt, which the model will continue given the image. Textual and image prompts can be passed to the model's processor as a single list to create appropriate inputs.",
+    "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/idefics.md",
+    "relevant_chunk_ids":[
+      1568
+    ]
+  }
+]

@@ -1,0 +1,797 @@
+[
+  {
+    "question":"What is the significance of noisy text supervision in the context of visual and vision-language representation learning?",
+    "contexts":[
+      "Gimpel, Piyush Sharma, Radu Soricut.\n1. **[ALIGN](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/align)** (from Google Research) released with the paper [Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision](https:\/\/arxiv.org\/abs\/2102.05918) by Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh, Hieu Pham, Quoc V. Le, Yunhsuan Sung, Zhen Li, Tom Duerig.\n1. **[AltCLIP](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/altclip)** (from BAAI) released with the paper [AltCLIP: Altering the Language Encoder in CLIP for Extended Language Capabilities](https:\/\/arxiv.org\/abs\/2211.06679) by Chen, Zhongzhi and Liu, Guang and Zhang, Bo-Wen and Ye, Fulong and Yang, Qinghong and Wu, Ledell.\n1. **[Audio Spectrogram Transformer](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/audio-spectrogram-transformer)** (from MIT) released with the paper [AST: Audio Spectrogram Transformer](https:\/\/arxiv.org\/abs\/2104.01778) by Yuan Gong, Yu-An Chung, James Gla"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"216",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the purpose of the training run id in the mlagents-learn command?",
+    "contexts":[
+      "we need to\u00a0**launch mlagents-learn and select the executable containing the environment.**\n\nWe define four parameters:\n\n1. `mlagents-learn <config>`: the path where the hyperparameter config file is.\n2. `-env`: where the environment executable is.\n3. `-run_id`: the name you want to give to your training run id.\n4. `-no-graphics`: to not launch the visualization during the training.\n\nDepending on your hardware, 5M timesteps (the recommended value, but you can also try 10M) will take 5 to 8 hours of training. You can continue using your computer in the meantime, but I advise deactivating the computer standby mode to prevent the training from being stopped.\n\nDepending on the executable you use (windows, ubuntu, mac) the training command will look like this (your executable path can be different so don\u2019t hesitate to check before running).\n\n```bash\nmlagents-learn .\/config\/poca\/SoccerTwos.yaml --env=.\/training-envs-executables\/SoccerTwos.exe --run-id=\"SoccerTwos\" --no-graphics\n```\n\nThe exec"
+    ],
+    "ground_truth":"The purpose of the training run id in the mlagents-learn command is to give a name to your training run id, which helps in identifying and organizing different training sessions.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"410",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit7\/hands-on.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the definition of accuracy in the context of performance metrics?",
+    "contexts":[
+      "for overall and per type:\n\nOverall (weighted and macro avg):\n\n`accuracy`: the average [accuracy](https:\/\/huggingface.co\/metrics\/accuracy), on a scale between 0.0 and 1.0.\n    \n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n    \n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), which is the harmonic mean of the precision and recall. It also has a scale of 0.0 to 1.0.\n\nPer type (e.g. `MISC`, `PER`, `LOC`,...):\n\n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n\n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), on a scale between 0.0 and 1.0.\n\n\n## Examples \n\n```python\n>>> predictions = [['INTJ', 'ADP', 'PROPN', 'NOUN', 'PUNCT', '"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"65",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/poseval\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the relationship between predictions and references in the evaluation process using ROUGE?",
+    "contexts":[
+      "ython\n>>> rouge = evaluate.load('rouge')\n>>> predictions = [\"hello there\", \"general kenobi\"]\n>>> references = [\"hello there\", \"general kenobi\"]\n>>> results = rouge.compute(predictions=predictions,\n...                         references=references)\n>>> print(results)\n{'rouge1': 1.0, 'rouge2': 1.0, 'rougeL': 1.0, 'rougeLsum': 1.0}\n```\n\nOne can also pass a custom tokenizer which is especially useful for non-latin languages.\n```python\n>>> results = rouge.compute(predictions=predictions,\n...                         references=references,\n                            tokenizer=lambda x: x.split())\n>>> print(results)\n{'rouge1': 1.0, 'rouge2': 1.0, 'rougeL': 1.0, 'rougeLsum': 1.0}\n```\n\nIt can also deal with lists of references for each predictions:\n```python\n>>> rouge = evaluate.load('rouge')\n>>> predictions = [\"hello there\", \"general kenobi\"]\n>>> references = [[\"hello\", \"there\"], [\"general kenobi\", \"general yoda\"]]\n>>> results = rouge.compute(predictions=predictions,\n..."
+    ],
+    "ground_truth":"The context does not explicitly describe the relationship between predictions and references in the evaluation process using ROUGE.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"380",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/rouge\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the significance of versioning in the Model Hub's repository features?",
+    "contexts":[
+      "; encrypted-media; gyroscope;\npicture-in-picture\" allowfullscreen><\/iframe>\n\n<Tip>\n\nTo share a model with the community, you need an account on [huggingface.co](https:\/\/huggingface.co\/join). You can also join an existing organization or create a new one.\n\n<\/Tip>\n\n## Repository features\n\nEach repository on the Model Hub behaves like a typical GitHub repository. Our repositories offer versioning, commit history, and the ability to visualize differences.\n\nThe Model Hub's built-in versioning is based on git and [git-lfs](https:\/\/git-lfs.github.com\/). In other words, you can treat one model as one repository, enabling greater access control and scalability. Version control allows *revisions*, a method for pinning a specific version of a model with a commit hash, tag or branch.\n\nAs a result, you can load a specific model version with the `revision` parameter:\n\n```py\n>>> model = AutoModel.from_pretrained(\n...     \"julien-c\/EsperBERTo-small\", revision=\"v2.0.1\"  # tag name, or branch name, or c"
+    ],
+    "ground_truth":"The significance of versioning in the Model Hub's repository features is that it allows for revisions, enabling users to pin a specific version of a model with a commit hash, tag, or branch. This version control facilitates greater access control and scalability, allowing users to load a specific model version using the `revision` parameter.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"319",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_sharing.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What are the key specifications and results of the seresnet152d model?",
+    "contexts":[
+      "tan X GPUs\n    ID: seresnet152d\n    LR: 0.6\n    Epochs: 100\n    Layers: 152\n    Dropout: 0.2\n    Crop Pct: '0.94'\n    Momentum: 0.9\n    Batch Size: 1024\n    Image Size: '256'\n    Interpolation: bicubic\n  Code: https:\/\/github.com\/rwightman\/pytorch-image-models\/blob\/a7f95818e44b281137503bcf4b3e3e94d8ffa52f\/timm\/models\/resnet.py#L1206\n  Weights: https:\/\/github.com\/rwightman\/pytorch-image-models\/releases\/download\/v0.1-weights\/seresnet152d_ra2-04464dd2.pth\n  Results:\n  - Task: Image Classification\n    Dataset: ImageNet\n    Metrics:\n      Top 1 Accuracy: 83.74%\n      Top 5 Accuracy: 96.77%\n- Name: seresnet50\n  In Collection: SE ResNet\n  Metadata:\n    FLOPs: 5285062320\n    Parameters: 28090000\n    File Size: 112621903\n    Architecture:\n    - 1x1 Convolution\n    - Batch Normalization\n    - Bottleneck Residual Block\n    - Convolution\n    - Global Average Pooling\n    - Max Pooling\n    - ReLU\n    - Residual Block\n    - Residual Connection\n    - Softmax\n    - Squeeze-and-Excitation Block\n    Tasks"
+    ],
+    "ground_truth":"The key specifications of the seresnet152d model include: ID: seresnet152d, Learning Rate (LR): 0.6, Epochs: 100, Layers: 152, Dropout: 0.2, Crop Percentage: '0.94', Momentum: 0.9, Batch Size: 1024, Image Size: '256', and Interpolation: bicubic. The results for the model on the Image Classification task using the ImageNet dataset show a Top 1 Accuracy of 83.74% and a Top 5 Accuracy of 96.77%.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"59",
+        "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/se-resnet.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What are the overall metrics used to evaluate performance, including accuracy, precision, recall, and F1 score?",
+    "contexts":[
+      "for overall and per type:\n\nOverall (weighted and macro avg):\n\n`accuracy`: the average [accuracy](https:\/\/huggingface.co\/metrics\/accuracy), on a scale between 0.0 and 1.0.\n    \n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n    \n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), which is the harmonic mean of the precision and recall. It also has a scale of 0.0 to 1.0.\n\nPer type (e.g. `MISC`, `PER`, `LOC`,...):\n\n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n\n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), on a scale between 0.0 and 1.0.\n\n\n## Examples \n\n```python\n>>> predictions = [['INTJ', 'ADP', 'PROPN', 'NOUN', 'PUNCT', '"
+    ],
+    "ground_truth":"The overall metrics used to evaluate performance include accuracy, precision, recall, and F1 score. Accuracy is the average accuracy on a scale between 0.0 and 1.0, precision is the average precision on a scale between 0.0 and 1.0, recall is the average recall on a scale between 0.0 and 1.0, and F1 score is the average F1 score, which is the harmonic mean of precision and recall, also on a scale of 0.0 to 1.0.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"65",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/poseval\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What improvements have been made to enhance the visual quality of the Kandinsky 3.0 model compared to its predecessors?",
+    "contexts":[
+      "s:\/\/github.com\/anvilarth),[Arseniy Shakhmatov](https:\/\/github.com\/cene555),[Andrey Kuznetsov](https:\/\/github.com\/kuznetsoffandrey),[Denis Dimitrov](https:\/\/github.com\/denndimitrov), [Zein Shaheen](https:\/\/github.com\/zeinsh)\n\nThe description from it's Github page: \n\n*Kandinsky 3.0 is an open-source text-to-image diffusion model built upon the Kandinsky2-x model family. In comparison to its predecessors, enhancements have been made to the text understanding and visual quality of the model, achieved by increasing the size of the text encoder and Diffusion U-Net models, respectively.*\n\nIts architecture includes 3 main components:\n1. [FLAN-UL2](https:\/\/huggingface.co\/google\/flan-ul2), which is an encoder decoder model based on the T5 architecture. \n2. New U-Net architecture featuring BigGAN-deep blocks doubles depth while maintaining the same number of parameters.\n3. Sber-MoVQGAN is a decoder proven to have superior results in image restoration.\n\n\n\nThe original codebase can be found at [ai-"
+    ],
+    "ground_truth":"The visual quality of the Kandinsky 3.0 model has been enhanced by increasing the size of the Diffusion U-Net models compared to its predecessors.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"90",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/api\/pipelines\/kandinsky3.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What improvement does Span-based Dynamic Convolution bring to the BERT model?",
+    "contexts":[
+      "s:\/\/huggingface.co\/docs\/transformers\/model_doc\/convbert)** (from YituTech) released with the paper [ConvBERT: Improving BERT with Span-based Dynamic Convolution](https:\/\/arxiv.org\/abs\/2008.02496) by Zihang Jiang, Weihao Yu, Daquan Zhou, Yunpeng Chen, Jiashi Feng, Shuicheng Yan.\n1. **[ConvNeXT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/convnext)** (from Facebook AI) released with the paper [A ConvNet for the 2020s](https:\/\/arxiv.org\/abs\/2201.03545) by Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, Saining Xie.\n1. **[ConvNeXTV2](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/convnextv2)** (from Facebook AI) released with the paper [ConvNeXt V2: Co-designing and Scaling ConvNets with Masked Autoencoders](https:\/\/arxiv.org\/abs\/2301.00808) by Sanghyun Woo, Shoubhik Debnath, Ronghang Hu, Xinlei Chen, Zhuang Liu, In So Kweon, Saining Xie.\n1. **[CPM](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/cpm)** (from Tsinghua University) released with th"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"230",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the default git revision of the dataset used to prepare the parquet files?",
+    "contexts":[
+      "reamed to get parquet files up to `PARQUET_AND_INFO_MAX_DATASET_SIZE_BYTES` bytes. Defaults to `10_000`.\n- `PARQUET_AND_INFO_MAX_ROW_GROUP_BYTE_SIZE_FOR_COPY`: the maximum size in bytes of the row groups of parquet datasets that are copied to the target revision. Bigger datasets, or datasets without that information, are partially streamed to get parquet files up to `PARQUET_AND_INFO_MAX_DATASET_SIZE_BYTES` bytes. Defaults to `100_000_000`.\n- `PARQUET_AND_INFO_SOURCE_REVISION`: the git revision of the dataset to use to prepare the parquet files. Defaults to `main`.\n- `PARQUET_AND_INFO_TARGET_REVISION`: the git revision of the dataset where to store the parquet files. Make sure the committer token (`PARQUET_AND_INFO_COMMITTER_HF_TOKEN`) has the permission to write there. Defaults to `refs\/convert\/parquet`.\n- `PARQUET_AND_INFO_URL_TEMPLATE`: the URL template to build the parquet file URLs. Defaults to `\/datasets\/%s\/resolve\/%s\/%s`.\n\n### Duckdb Index worker\n\nSet environment variables to co"
+    ],
+    "ground_truth":"The default git revision of the dataset used to prepare the parquet files is 'main'.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"103",
+        "source":"huggingface\/datasets-server\/blob\/main\/services\/worker\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What are the advantages of using TimeSformer for video classification compared to 3D convolutional networks?",
+    "contexts":[
+      "d spatial attention are separately applied within each block, leads to the best video classification accuracy among the design choices considered. Despite the radically new design, TimeSformer achieves state-of-the-art results on several action recognition benchmarks, including the best reported accuracy on Kinetics-400 and Kinetics-600. Finally, compared to 3D convolutional networks, our model is faster to train, it can achieve dramatically higher test efficiency (at a small drop in accuracy), and it can also be applied to much longer video clips (over one minute long). Code and models are available at: [this https URL](https:\/\/github.com\/facebookresearch\/TimeSformer).*\n\nThis model was contributed by [fcakyon](https:\/\/huggingface.co\/fcakyon).\nThe original code can be found [here](https:\/\/github.com\/facebookresearch\/TimeSformer).\n\n## Usage tips\n\nThere are many pretrained variants. Select your pretrained model based on the dataset it is trained on. Moreover,\nthe number of input frames p"
+    ],
+    "ground_truth":"TimeSformer offers several advantages for video classification compared to 3D convolutional networks, including faster training, dramatically higher test efficiency (with only a small drop in accuracy), and the ability to be applied to much longer video clips (over one minute long).",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"428",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/timesformer.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the Top 5 Accuracy achieved in the image classification task using the res2net50_26w_4s model?",
+    "contexts":[
+      "Us\n    ID: res2net50_26w_4s\n    LR: 0.1\n    Epochs: 100\n    Crop Pct: '0.875'\n    Momentum: 0.9\n    Batch Size: 256\n    Image Size: '224'\n    Weight Decay: 0.0001\n    Interpolation: bilinear\n  Code: https:\/\/github.com\/rwightman\/pytorch-image-models\/blob\/d8e69206be253892b2956341fea09fdebfaae4e3\/timm\/models\/res2net.py#L141\n  Weights: https:\/\/github.com\/rwightman\/pytorch-image-models\/releases\/download\/v0.1-res2net\/res2net50_26w_4s-06e79181.pth\n  Results:\n  - Task: Image Classification\n    Dataset: ImageNet\n    Metrics:\n      Top 1 Accuracy: 77.99%\n      Top 5 Accuracy: 93.85%\n- Name: res2net50_26w_6s\n  In Collection: Res2Net\n  Metadata:\n    FLOPs: 8130156528\n    Parameters: 37050000\n    File Size: 148603239\n    Architecture:\n    - Batch Normalization\n    - Convolution\n    - Global Average Pooling\n    - ReLU\n    - Res2Net Block\n    Tasks:\n    - Image Classification\n    Training Techniques:\n    - SGD with Momentum\n    - Weight Decay\n    Training Data:\n    - ImageNet\n    Training Resources:"
+    ],
+    "ground_truth":"The Top 5 Accuracy achieved in the image classification task using the res2net50_26w_4s model is 93.85%.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"174",
+        "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/res2net.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is an example of how to use multi-dimensional lists with the MAPE metric in Python?",
+    "contexts":[
+      "onfig:\n```python\n>>> mape_metric = evaluate.load(\"mape\")\n>>> predictions = [2.5, 0.0, 2, 8]\n>>> references = [3, -0.5, 2, 7]\n>>> results = mape_metric.compute(predictions=predictions, references=references)\n>>> print(results)\n{'mape': 0.3273...}\n```\n\nExample with multi-dimensional lists, and the `raw_values` config:\n```python\n>>> mape_metric = evaluate.load(\"mape\", \"multilist\")\n>>> predictions = [[0.5, 1], [-1, 1], [7, -6]]\n>>> references = [[0.1, 2], [-1, 2], [8, -5]]\n>>> results = mape_metric.compute(predictions=predictions, references=references)\n>>> print(results)\n{'mape': 0.8874...}\n>>> results = mape_metric.compute(predictions=predictions, references=references, multioutput='raw_values')\n>>> print(results)\n{'mape': array([1.3749..., 0.4])}\n```\n\n## Limitations and Bias\nOne limitation of MAPE is that it cannot be used if the ground truth is zero or close to zero. This metric is also asymmetric in that it puts a heavier penalty on predictions less than the ground truth and a smaller"
+    ],
+    "ground_truth":"An example of how to use multi-dimensional lists with the MAPE metric in Python is as follows: First, load the MAPE metric with the 'multilist' configuration. Then, define your predictions and references as multi-dimensional lists, such as predictions = [[0.5, 1], [-1, 1], [7, -6]] and references = [[0.1, 2], [-1, 2], [8, -5]]. After that, compute the MAPE metric using mape_metric.compute(predictions=predictions, references=references). You can also compute it with the 'raw_values' option by using mape_metric.compute(predictions=predictions, references=references, multioutput='raw_values').",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"346",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/mape\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the purpose of the rename_column method in the context of dataset manipulation?",
+    "contexts":[
+      ": a rename_column method to change the name of a column, and a remove_columns method to delete them. You can see examples of both these method here. Some datasets have nested columns and you can expand these by applying the flatten method. For example in the SQUAD dataset, the answers column contains a text and answer_start field. If we want to promote them to their own separate columns, we can apply flatten as shown here. Of course, no discussion of the Datasets library would be complete without mentioning the famous map method. This method applies a custom processing function to each row in the dataset. For example,here we first define a lowercase_title function that simply lowercases the text in the title column and then we feed that to the map method and voila! we now have lowercase titles. The map method can also be used to feed batches of rows to the processing function. This is especially useful for tokenization, where the tokenizers are backed by the Tokenizers library can use"
+    ],
+    "ground_truth":"The purpose of the rename_column method in the context of dataset manipulation is to change the name of a column.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"182",
+        "source":"huggingface\/course\/blob\/main\/subtitles\/en\/raw\/chapter5\/03a_slice-and-dice.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What are the steps to create a W&B account?",
+    "contexts":[
+      "kflow is similar to github repos. There are over 2000+ spaces currently on Hugging Face. Learn more about spaces [here](https:\/\/huggingface.co\/spaces\/launch).\n\n## Setting up a Gradio Demo for JoJoGAN\n\nNow, let's walk you through how to do this on your own. We'll make the assumption that you're new to W&B and Gradio for the purposes of this tutorial.\n\nLet's get started!\n\n1. Create a W&B account\n\n   Follow [these quick instructions](https:\/\/app.wandb.ai\/login) to create your free account if you don\u2019t have one already. It shouldn't take more than a couple minutes. Once you're done (or if you've already got an account), next, we'll run a quick colab.\n\n2. Open Colab Install Gradio and W&B\n\n   We'll be following along with the colab provided in the JoJoGAN repo with some minor modifications to use Wandb and Gradio more effectively.\n\n   [![Open In Colab](https:\/\/colab.research.google.com\/assets\/colab-badge.svg)](https:\/\/colab.research.google.com\/github\/mchong6\/JoJoGAN\/blob\/main\/stylize.ipynb)"
+    ],
+    "ground_truth":"To create a W&B account, follow these quick instructions to create your free account if you don\u2019t have one already. It shouldn't take more than a couple of minutes.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"483",
+        "source":"gradio-app\/gradio\/blob\/main\/guides\/06_integrating-other-frameworks\/Gradio-and-Wandb-Integration.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What resources are available for contributing a new model?",
+    "contexts":[
+      "g Zeng, Yunyang Xiong, Sathya N. Ravi, Shailesh Acharya, Glenn Fung, Vikas Singh.\n1. Want to contribute a new model? We have added a **detailed guide and templates** to guide you in the process of adding a new model. You can find them in the [`templates`](.\/templates) folder of the repository. Be sure to check the [contributing guidelines](.\/CONTRIBUTING.md) and contact the maintainers or open an issue to collect feedbacks before starting your PR.\n\n\u0427\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c, \u0435\u0441\u0442\u044c \u043b\u0438 \u0443 \u043a\u0430\u0436\u0434\u043e\u0439 \u043c\u043e\u0434\u0435\u043b\u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f \u043d\u0430 Flax, PyTorch \u0438\u043b\u0438 TensorFlow, \u0438\u043b\u0438 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0439 \u0441 \u043d\u0435\u0439 \u0442\u043e\u043a\u0435\u043d\u0438\u0437\u0430\u0442\u043e\u0440, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0439 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u043e\u0439 \ud83e\udd17 Tokenizers, \u043e\u0431\u0440\u0430\u0442\u0438\u0442\u0435\u0441\u044c \u043a [\u044d\u0442\u043e\u0439 \u0442\u0430\u0431\u043b\u0438\u0446\u0435](https:\/\/huggingface.co\/docs\/transformers\/index#supported-frameworks).\n\n\u042d\u0442\u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438 \u0431\u044b\u043b\u0438 \u043f\u0440\u043e\u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u043d\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u043d\u0430\u0431\u043e\u0440\u0430\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 (\u0441\u043c. \u043f\u0440\u0438\u043c\u0435\u0440\u044b \u0441\u043a\u0440\u0438\u043f\u0442\u043e\u0432) \u0438 \u0434\u043e\u043b\u0436\u043d\u044b \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0439. \u0411\u043e\u043b\u0435\u0435 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043c\u043e\u0436\u043d\u043e \u043d\u0430\u0439\u0442\u0438 \u0432 \u0440\u0430\u0437\u0434\u0435\u043b\u0435 \"\u041f\u0440\u0438\u043c\u0435\u0440\u044b\" [\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438](https:\/\/github.com\/huggingface\/transfo"
+    ],
+    "ground_truth":"A detailed guide and templates are available to assist in the process of adding a new model. These can be found in the 'templates' folder of the repository. Additionally, contributing guidelines are provided, and maintainers can be contacted or an issue can be opened to collect feedback before starting a pull request.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"313",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"\u5982\u4f55\u901a\u8fc7\u5e76\u884c\u5904\u7406\u6765\u52a0\u5feb Gradio \u670d\u52a1\u5668\u7684\u6f14\u793a\u901f\u5ea6\uff1f",
+    "contexts":[
+      "\u70b9\u662f\uff0c\u5982\u679c\u542f\u7528\u4e86\u961f\u5217\uff0cGradio \u670d\u52a1\u5668\u53ef\u4ee5\u81ea\u52a8*\u6279\u5904\u7406*\u4f20\u5165\u7684\u8bf7\u6c42\u5e76\u5e76\u884c\u5904\u7406\u5b83\u4eec\uff0c\u4ece\u800c\u53ef\u80fd\u52a0\u5feb\u6f14\u793a\u901f\u5ea6\u3002\u4ee5\u4e0b\u662f Gradio \u4ee3\u7801\u7684\u793a\u4f8b\uff08\u8bf7\u6ce8\u610f `batch=True` \u548c `max_batch"
+    ],
+    "ground_truth":"\u901a\u8fc7\u542f\u7528\u961f\u5217\uff0cGradio \u670d\u52a1\u5668\u53ef\u4ee5\u81ea\u52a8\u6279\u5904\u7406\u4f20\u5165\u7684\u8bf7\u6c42\u5e76\u5e76\u884c\u5904\u7406\u5b83\u4eec\uff0c\u4ece\u800c\u53ef\u80fd\u52a0\u5feb\u6f14\u793a\u901f\u5ea6\u3002",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"16",
+        "source":"gradio-app\/gradio\/blob\/main\/guides\/cn\/01_getting-started\/02_key-features.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the purpose of the Nystr\u00f6mformer in the context of approximating self-attention?",
+    "contexts":[
+      "Behind: Scaling Human-Centered Machine Translation](https:\/\/arxiv.org\/abs\/2207.04672) by the NLLB team.\n1. **[NLLB-MOE](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/nllb-moe)** (from Meta) released with the paper [No Language Left Behind: Scaling Human-Centered Machine Translation](https:\/\/arxiv.org\/abs\/2207.04672) by the NLLB team.\n1. **[Nystr\u00f6mformer](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/nystromformer)** (from the University of Wisconsin - Madison) released with the paper [Nystr\u00f6mformer: A Nystr\u00f6m-Based Algorithm for Approximating Self-Attention](https:\/\/arxiv.org\/abs\/2102.03902) by Yunyang Xiong, Zhanpeng Zeng, Rudrasis Chakraborty, Mingxing Tan, Glenn Fung, Yin Li, Vikas Singh.\n1. **[OneFormer](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/oneformer)** (from SHI Labs) released with the paper [OneFormer: One Transformer to Rule Universal Image Segmentation](https:\/\/arxiv.org\/abs\/2211.06220) by Jitesh Jain, Jiachen Li, MangTik Chiu, Ali Hassani, Nikita Orlov"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"276",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What parameter should be added to the training script for multi-GPU training?",
+    "contexts":[
+      ", args.adam_beta2),\n    weight_decay=args.adam_weight_decay,\n    eps=args.adam_epsilon,\n)\n```\n\nAside from setting up the LoRA layers, the training script is more or less the same as train_text_to_image.py!\n\n## Launch the script\n\nOnce you've made all your changes or you're okay with the default configuration, you're ready to launch the training script! \ud83d\ude80\n\nLet's train on the [Pok\u00e9mon BLIP captions](https:\/\/huggingface.co\/datasets\/lambdalabs\/pokemon-blip-captions) dataset to generate our yown Pok\u00e9mon. Set the environment variables `MODEL_NAME` and `DATASET_NAME` to the model and dataset respectively. You should also specify where to save the model in `OUTPUT_DIR`, and the name of the model to save to on the Hub with `HUB_MODEL_ID`. The script creates and saves the following files to your repository:\n\n- saved model checkpoints\n- `pytorch_lora_weights.safetensors` (the trained LoRA weights)\n\nIf you're training on more than one GPU, add the `--multi_gpu` parameter to the `accelerate launch`"
+    ],
+    "ground_truth":"The parameter that should be added to the training script for multi-GPU training is `--multi_gpu`.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"339",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/training\/lora.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What files are created and saved after training with the LoRA weights?",
+    "contexts":[
+      ", args.adam_beta2),\n    weight_decay=args.adam_weight_decay,\n    eps=args.adam_epsilon,\n)\n```\n\nAside from setting up the LoRA layers, the training script is more or less the same as train_text_to_image.py!\n\n## Launch the script\n\nOnce you've made all your changes or you're okay with the default configuration, you're ready to launch the training script! \ud83d\ude80\n\nLet's train on the [Pok\u00e9mon BLIP captions](https:\/\/huggingface.co\/datasets\/lambdalabs\/pokemon-blip-captions) dataset to generate our yown Pok\u00e9mon. Set the environment variables `MODEL_NAME` and `DATASET_NAME` to the model and dataset respectively. You should also specify where to save the model in `OUTPUT_DIR`, and the name of the model to save to on the Hub with `HUB_MODEL_ID`. The script creates and saves the following files to your repository:\n\n- saved model checkpoints\n- `pytorch_lora_weights.safetensors` (the trained LoRA weights)\n\nIf you're training on more than one GPU, add the `--multi_gpu` parameter to the `accelerate launch`",
+      "sitory:\n\n- saved model checkpoints\n- `pytorch_lora_weights.safetensors` (the trained LoRA weights)\n\nIf you're training on more than one GPU, add the `--multi_gpu` parameter to the `accelerate launch` command.\n\n<Tip warning={true}>\n\nA full training run takes ~5 hours on a 2080 Ti GPU with 11GB of VRAM.\n\n<\/Tip>\n\n```bash\nexport MODEL_NAME=\"runwayml\/stable-diffusion-v1-5\"\nexport OUTPUT_DIR=\"\/sddata\/finetune\/lora\/pokemon\"\nexport HUB_MODEL_ID=\"pokemon-lora\"\nexport DATASET_NAME=\"lambdalabs\/pokemon-blip-captions\"\n\naccelerate launch --mixed_precision=\"fp16\"  train_text_to_image_lora.py \\\n  --pretrained_model_name_or_path=$MODEL_NAME \\\n  --dataset_name=$DATASET_NAME \\\n  --dataloader_num_workers=8 \\\n  --resolution=512 \\\n  --center_crop \\\n  --random_flip \\\n  --train_batch_size=1 \\\n  --gradient_accumulation_steps=4 \\\n  --max_train_steps=15000 \\\n  --learning_rate=1e-04 \\\n  --max_grad_norm=1 \\\n  --lr_scheduler=\"cosine\" \\\n  --lr_warmup_steps=0 \\\n  --output_dir=${OUTPUT_DIR} \\\n  --push_to_hub \\\n  --hub"
+    ],
+    "ground_truth":"The files created and saved after training with the LoRA weights include saved model checkpoints and `pytorch_lora_weights.safetensors` (the trained LoRA weights).",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"339",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/training\/lora.md"
+      },
+      {
+        "id":"340",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/training\/lora.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the purpose of the authentication token in the process of sharing your model with the community?",
+    "contexts":[
+      "he AI vs. AI challenge and visualize them playing on your browser\ud83d\udd25.**\n\nTo be able to share your model with the community, there are three more steps to follow:\n\n1\ufe0f\u20e3 (If it\u2019s not already done) create an account to HF \u27a1\u00a0[https:\/\/huggingface.co\/join](https:\/\/huggingface.co\/join)\n\n2\ufe0f\u20e3 Sign in and store your authentication token from the Hugging Face website.\n\nCreate a new token (https:\/\/huggingface.co\/settings\/tokens)\u00a0**with write role**\n\n<img src=\"https:\/\/huggingface.co\/datasets\/huggingface-deep-rl-course\/course-images\/resolve\/main\/en\/notebooks\/create-token.jpg\" alt=\"Create HF Token\">\n\nCopy the token, run this, and paste the token\n\n```bash\nhuggingface-cli login\n```\n\nThen, we need to run `mlagents-push-to-hf`.\n\nAnd we define four parameters:\n\n1. `-run-id`: the name of the training run id.\n2. `-local-dir`: where the agent was saved, it\u2019s results\/<run_id name>, so in my case results\/First Training.\n3. `-repo-id`: the name of the Hugging Face repo you want to create or update. It\u2019s always <yo"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"412",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit7\/hands-on.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the purpose of the rename_column method in the context of dataset manipulation?",
+    "contexts":[
+      ": a rename_column method to change the name of a column, and a remove_columns method to delete them. You can see examples of both these method here. Some datasets have nested columns and you can expand these by applying the flatten method. For example in the SQUAD dataset, the answers column contains a text and answer_start field. If we want to promote them to their own separate columns, we can apply flatten as shown here. Of course, no discussion of the Datasets library would be complete without mentioning the famous map method. This method applies a custom processing function to each row in the dataset. For example,here we first define a lowercase_title function that simply lowercases the text in the title column and then we feed that to the map method and voila! we now have lowercase titles. The map method can also be used to feed batches of rows to the processing function. This is especially useful for tokenization, where the tokenizers are backed by the Tokenizers library can use"
+    ],
+    "ground_truth":"The purpose of the rename_column method in the context of dataset manipulation is to change the name of a column.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"182",
+        "source":"huggingface\/course\/blob\/main\/subtitles\/en\/raw\/chapter5\/03a_slice-and-dice.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the process for reshuffling a dataset between epochs?",
+    "contexts":[
+      "leDataset`] and leveraging its fast approximate shuffling method [`IterableDataset.shuffle`].\nIt only shuffles the shards order and adds a shuffle buffer to your dataset, which keeps the speed of your dataset optimal.\nYou can also reshuffle the dataset easily:\n\n```python\nfor example in enumerate(my_iterable_dataset):  # fast\n    pass\n\nshuffled_iterable_dataset = my_iterable_dataset.shuffle(seed=42, buffer_size=100)\n\nfor example in enumerate(shuffled_iterable_dataset):  # as fast as before\n    pass\n\nshuffled_iterable_dataset = my_iterable_dataset.shuffle(seed=1337, buffer_size=100)  # reshuffling using another seed is instantaneous\n\nfor example in enumerate(shuffled_iterable_dataset):  # still as fast as before\n    pass\n```\n\nIf you're using your dataset on multiple epochs, the effective seed to shuffle the shards order in the shuffle buffer is `seed + epoch`.\nIt makes it easy to reshuffle a dataset between epochs:\n```python\nfor epoch in range(n_epochs):\n    my_iterable_dataset.set_epoch"
+    ],
+    "ground_truth":"The process for reshuffling a dataset between epochs involves using an effective seed calculated as `seed + epoch`. This allows for easy reshuffling of the dataset between different epochs.",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"129",
+        "source":"huggingface\/datasets\/blob\/main\/docs\/source\/about_mapstyle_vs_iterable.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What role does image generation play in the context of using ControlNet and LCM-LoRA?",
+    "contexts":[
+      "e=\"lcm\")\npipe.load_lora_weights(\"TheLastBen\/Papercut_SDXL\", weight_name=\"papercut.safetensors\", adapter_name=\"papercut\")\n\n# Combine LoRAs\npipe.set_adapters([\"lcm\", \"papercut\"], adapter_weights=[1.0, 0.8])\n\nprompt = \"papercut, a cute fox\"\ngenerator = torch.manual_seed(0)\nimage = pipe(prompt, num_inference_steps=4, guidance_scale=1, generator=generator).images[0]\nimage\n```\n\n![](https:\/\/huggingface.co\/datasets\/huggingface\/documentation-images\/resolve\/main\/diffusers\/lcm\/lcm_sdx_lora_mix.png)\n\n\n## ControlNet\/T2I-Adapter\n\nLet's look at how we can perform inference with ControlNet\/T2I-Adapter and LCM-LoRA. \n\n### ControlNet\nFor this example, we'll use the SD-v1-5 model and the LCM-LoRA for SD-v1-5 with canny ControlNet.\n\n```python\nimport torch\nimport cv2\nimport numpy as np\nfrom PIL import Image\n\nfrom diffusers import StableDiffusionControlNetPipeline, ControlNetModel, LCMScheduler\nfrom diffusers.utils import load_image\n\nimage = load_image(\n    \"https:\/\/hf.co\/datasets\/huggingface\/documentation-"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"453",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/using-diffusers\/inference_with_lcm_lora.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What is the significance of descriptive statistics in analyzing data distributions?",
+    "contexts":[
+      "histogram is counted as `(max_value - min_value) \/ DESCRIPTIVE_STATISTICS_HISTOGRAM_NUM_BINS`\n\n<details><summary>example: <\/summary>\n<p>\n\n```python\n{\n    \"column_name\": \"delay\",\n    \"column_type\": \"float\",\n    \"column_statistics\": {\n        \"nan_count\": 0,\n        \"nan_proportion\": 0.0,\n        \"min\": -10.206,\n        \"max\": 8.48053,\n        \"mean\": 2.10174,\n        \"median\": 3.4012,\n        \"std\": 3.12487,\n        \"histogram\": {\n            \"hist\": [\n                2,\n                34,\n                256,\n                15198,\n                9037,\n                2342,\n                12743,\n                45114,\n                14904,\n                370\n            ],\n            \"bin_edges\": [\n                -10.206,\n                -8.33734,\n                -6.46869,\n                -4.60004,\n                -2.73139,\n                -0.86273,\n                1.00592,\n                2.87457,\n                4.74322,\n                6.61188,\n                8.48053  # incl"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"simple",
+    "metadata":[
+      {
+        "id":"109",
+        "source":"huggingface\/datasets-server\/blob\/main\/services\/worker\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What metrics gauge auto summaries vs. human refs in NLP?",
+    "contexts":[
+      "rouge\n---\n\n# Metric Card for ROUGE\n\n## Metric Description\nROUGE, or Recall-Oriented Understudy for Gisting Evaluation, is a set of metrics and a software package used for evaluating automatic summarization and machine translation software in natural language processing. The metrics compare an automatically produced summary or translation against a reference or a set of references (human-produced) summary or translation.\n\nNote that ROUGE is case insensitive, meaning that upper case letters are treated the same way as lower case letters.\n\nThis metrics is a wrapper around the [Google Research reimplementation of ROUGE](https:\/\/github.com\/google-research\/google-research\/tree\/master\/rouge)\n\n## How to Use\nAt minimum, this metric takes as input a list of predictions and a list of references:\n```python\n>>> rouge = evaluate.load('rouge')\n>>> predictions = [\"hello there\", \"general kenobi\"]\n>>> references = [\"hello there\", \"general kenobi\"]\n>>> results = rouge.compute(predictions=predictions,\n..."
+    ],
+    "ground_truth":"ROUGE is a set of metrics used for evaluating automatic summarization and machine translation software in natural language processing. It compares an automatically produced summary or translation against a reference or a set of references (human-produced) summary or translation.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"379",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/rouge\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does MRA boost self-attention in transformers?",
+    "contexts":[
+      "transformers\/model_doc\/mpnet)** (from Microsoft Research) released with the paper [MPNet: Masked and Permuted Pre-training for Language Understanding](https:\/\/arxiv.org\/abs\/2004.09297) by Kaitao Song, Xu Tan, Tao Qin, Jianfeng Lu, Tie-Yan Liu.\n1. **[MPT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/mpt)** (from MosaiML) released with the repository [llm-foundry](https:\/\/github.com\/mosaicml\/llm-foundry\/) by the MosaicML NLP Team.\n1. **[MRA](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/mra)** (from the University of Wisconsin - Madison) released with the paper [Multi Resolution Analysis (MRA) for Approximate Self-Attention](https:\/\/arxiv.org\/abs\/2207.10284) by Zhanpeng Zeng, Sourav Pal, Jeffery Kline, Glenn M Fung, Vikas Singh.\n1. **[MT5](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/mt5)** (from Google AI) released with the paper [mT5: A massively multilingual pre-trained text-to-text transformer](https:\/\/arxiv.org\/abs\/2010.11934) by Linting Xue, Noah Constant, Adam Rob"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"273",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What design features in TimeSformer boost video classification accuracy and efficiency?",
+    "contexts":[
+      "d spatial attention are separately applied within each block, leads to the best video classification accuracy among the design choices considered. Despite the radically new design, TimeSformer achieves state-of-the-art results on several action recognition benchmarks, including the best reported accuracy on Kinetics-400 and Kinetics-600. Finally, compared to 3D convolutional networks, our model is faster to train, it can achieve dramatically higher test efficiency (at a small drop in accuracy), and it can also be applied to much longer video clips (over one minute long). Code and models are available at: [this https URL](https:\/\/github.com\/facebookresearch\/TimeSformer).*\n\nThis model was contributed by [fcakyon](https:\/\/huggingface.co\/fcakyon).\nThe original code can be found [here](https:\/\/github.com\/facebookresearch\/TimeSformer).\n\n## Usage tips\n\nThere are many pretrained variants. Select your pretrained model based on the dataset it is trained on. Moreover,\nthe number of input frames p"
+    ],
+    "ground_truth":"The design features in TimeSformer that boost video classification accuracy and efficiency include the application of spatial attention within each block, which leads to the best video classification accuracy among the design choices considered. Additionally, TimeSformer is faster to train compared to 3D convolutional networks, achieves dramatically higher test efficiency with a small drop in accuracy, and can be applied to much longer video clips (over one minute long).",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"428",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_doc\/timesformer.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What does an optimal Q-function say about actions in different states?",
+    "contexts":[
+      "Q-Learning Recap [[q-learning-recap]]\n\n\n*Q-Learning* **is the RL algorithm that** :\n\n- Trains a *Q-function*, an **action-value function** encoded, in internal memory, by a *Q-table* **containing all the state-action pair values.**\n\n- Given a state and action, our Q-function **will search its Q-table for the corresponding value.**\n\n<img src=\"https:\/\/huggingface.co\/datasets\/huggingface-deep-rl-course\/course-images\/resolve\/main\/en\/unit3\/Q-function-2.jpg\" alt=\"Q function\"  width=\"100%\"\/>\n\n- When the training is done, **we have an optimal Q-function, or, equivalently, an optimal Q-table.**\n\n- And if we **have an optimal Q-function**, we\nhave an optimal policy, since we **know, for each state, the best action to take.**\n\n<img src=\"https:\/\/huggingface.co\/datasets\/huggingface-deep-rl-course\/course-images\/resolve\/main\/en\/unit3\/link-value-policy.jpg\" alt=\"Link value policy\"  width=\"100%\"\/>\n\nBut, in the beginning,\u00a0our **Q-table is useless since it gives arbitrary values for each state-action pa"
+    ],
+    "ground_truth":"An optimal Q-function indicates the best action to take for each state, as it provides the corresponding value for each state-action pair, allowing for the determination of an optimal policy.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"132",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit2\/q-learning-recap.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"Which method averages strategies to reduce trajectory estimation variability?",
+    "contexts":[
+      "ates, but a sample of those\",\n\t\t\texplain: \"\",\n      \t\t\tcorrect: true,\n\t\t},\n    \t\t{\n\t\t\ttext: \"It's very resistant to stochasticity (random elements in the trajectory)\",\n\t\t\texplain: \"Monte Carlo randomly estimates everytime a sample of trajectories. However, even same trajectories can have different reward values if they contain stochastic elements\",\n      \t\t\tcorrect: false,\n\t\t},\n    \t\t{\n\t\t\ttext: \"To reduce the impact of stochastic elements in Monte Carlo, we take `n` strategies and average them, reducing their individual impact\",\n\t\t\texplain: \"\",\n\t\t\tcorrect: true,\n\t\t},\t\t    \n\t]}\n\/>\n\n### Q4: How would you describe, with your own words, the Actor-Critic Method (A2C)?\n\n<details>\n<summary>Solution<\/summary>\n\nThe idea behind Actor-Critic is that we learn two function approximations:\n1. A `policy` that controls how our agent acts (\u03c0)\n2. A `value` function to assist the policy update by measuring how good the action taken is (q)\n\n<img src=\"https:\/\/huggingface.co\/datasets\/huggingface-deep-rl-cou"
+    ],
+    "ground_truth":"The method that averages strategies to reduce trajectory estimation variability is Monte Carlo, which takes `n` strategies and averages them to reduce the individual impact of stochastic elements.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"153",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit6\/quiz.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What comes after generating an SSH key for huggingface.co?",
+    "contexts":[
+      "9.pub\n\nThose files contain your SSH public key.\n\nIf you don't have such file under `~\/.ssh`, you will have to [generate a new key](#generating-a-new-ssh-keypair). Otherwise, you can [add your existing SSH public key(s) to your huggingface.co account](#add-a-ssh-key-to-your-account).\n\n## Generating a new SSH keypair\n\nIf you don't have any SSH keys on your machine, you can use `ssh-keygen` to generate a new SSH key pair (public + private keys):\n\n```\n$ ssh-keygen -t ed25519 -C \"your.email@example.co\"\n```\n\nWe recommend entering a passphrase when you are prompted to. A passphrase is an extra layer of security: it is a password that will be prompted whenever you use your SSH key.\n\nOnce your new key is generated, add it to your SSH agent with `ssh-add`:\n\n```\n$ ssh-add ~\/.ssh\/id_ed25519\n```\n\nIf you chose a different location than the default to store your SSH key, you would have to replace `~\/.ssh\/id_ed25519` with the file location you used.\n\n## Add a SSH key to your account\n\nTo access private"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"39",
+        "source":"huggingface\/hub-docs\/blob\/main\/docs\/hub\/security-git-ssh.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"\u5982\u4f55\u63d0\u5347 Gradio \u670d\u52a1\u5668\u6f14\u793a\u6548\u7387\uff1f",
+    "contexts":[
+      "\u70b9\u662f\uff0c\u5982\u679c\u542f\u7528\u4e86\u961f\u5217\uff0cGradio \u670d\u52a1\u5668\u53ef\u4ee5\u81ea\u52a8*\u6279\u5904\u7406*\u4f20\u5165\u7684\u8bf7\u6c42\u5e76\u5e76\u884c\u5904\u7406\u5b83\u4eec\uff0c\u4ece\u800c\u53ef\u80fd\u52a0\u5feb\u6f14\u793a\u901f\u5ea6\u3002\u4ee5\u4e0b\u662f Gradio \u4ee3\u7801\u7684\u793a\u4f8b\uff08\u8bf7\u6ce8\u610f `batch=True` \u548c `max_batch"
+    ],
+    "ground_truth":"Gradio \u670d\u52a1\u5668\u53ef\u4ee5\u901a\u8fc7\u542f\u7528\u961f\u5217\u6765\u63d0\u5347\u6f14\u793a\u6548\u7387\uff0c\u8fd9\u6837\u53ef\u4ee5\u81ea\u52a8\u6279\u5904\u7406\u4f20\u5165\u7684\u8bf7\u6c42\u5e76\u5e76\u884c\u5904\u7406\u5b83\u4eec\uff0c\u4ece\u800c\u53ef\u80fd\u52a0\u5feb\u6f14\u793a\u901f\u5ea6\u3002",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"16",
+        "source":"gradio-app\/gradio\/blob\/main\/guides\/cn\/01_getting-started\/02_key-features.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"Which framework unifies self-supervised learning in speech, vision, and language?",
+    "contexts":[
+      "ormers\/model_doc\/ctrl)** (from Salesforce) released with the paper [CTRL: A Conditional Transformer Language Model for Controllable Generation](https:\/\/arxiv.org\/abs\/1909.05858) by Nitish Shirish Keskar*, Bryan McCann*, Lav R. Varshney, Caiming Xiong and Richard Socher.\n1. **[CvT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/cvt)** (from Microsoft) released with the paper [CvT: Introducing Convolutions to Vision Transformers](https:\/\/arxiv.org\/abs\/2103.15808) by Haiping Wu, Bin Xiao, Noel Codella, Mengchen Liu, Xiyang Dai, Lu Yuan, Lei Zhang.\n1. **[Data2Vec](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/data2vec)** (from Facebook) released with the paper [Data2Vec:  A General Framework for Self-supervised Learning in Speech, Vision and Language](https:\/\/arxiv.org\/abs\/2202.03555) by Alexei Baevski, Wei-Ning Hsu, Qiantong Xu, Arun Babu, Jiatao Gu, Michael Auli.\n1. **[DeBERTa](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/deberta)** (from Microsoft) released with the paper"
+    ],
+    "ground_truth":"Data2Vec is the framework that unifies self-supervised learning in speech, vision, and language.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"232",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What sets Kandinsky 3.0 apart in text understanding?",
+    "contexts":[
+      "s:\/\/github.com\/anvilarth),[Arseniy Shakhmatov](https:\/\/github.com\/cene555),[Andrey Kuznetsov](https:\/\/github.com\/kuznetsoffandrey),[Denis Dimitrov](https:\/\/github.com\/denndimitrov), [Zein Shaheen](https:\/\/github.com\/zeinsh)\n\nThe description from it's Github page: \n\n*Kandinsky 3.0 is an open-source text-to-image diffusion model built upon the Kandinsky2-x model family. In comparison to its predecessors, enhancements have been made to the text understanding and visual quality of the model, achieved by increasing the size of the text encoder and Diffusion U-Net models, respectively.*\n\nIts architecture includes 3 main components:\n1. [FLAN-UL2](https:\/\/huggingface.co\/google\/flan-ul2), which is an encoder decoder model based on the T5 architecture. \n2. New U-Net architecture featuring BigGAN-deep blocks doubles depth while maintaining the same number of parameters.\n3. Sber-MoVQGAN is a decoder proven to have superior results in image restoration.\n\n\n\nThe original codebase can be found at [ai-"
+    ],
+    "ground_truth":"Kandinsky 3.0 sets itself apart in text understanding by enhancing the size of the text encoder compared to its predecessors, which improves its ability to understand text.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"90",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/api\/pipelines\/kandinsky3.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What allows SE-ResNet to adjust channel features?",
+    "contexts":[
+      "SE-ResNet\n\n**SE ResNet** is a variant of a [ResNet](https:\/\/www.paperswithcode.com\/method\/resnet) that employs [squeeze-and-excitation blocks](https:\/\/paperswithcode.com\/method\/squeeze-and-excitation-block) to enable the network to perform dynamic channel-wise feature recalibration.\n\n## How do I use this model on an image?\n\nTo load a pretrained model:\n\n```py\n>>> import timm\n>>> model = timm.create_model('seresnet152d', pretrained=True)\n>>> model.eval()\n```\n\nTo load and preprocess the image:\n\n```py \n>>> import urllib\n>>> from PIL import Image\n>>> from timm.data import resolve_data_config\n>>> from timm.data.transforms_factory import create_transform\n\n>>> config = resolve_data_config({}, model=model)\n>>> transform = create_transform(**config)\n\n>>> url, filename = (\"https:\/\/github.com\/pytorch\/hub\/raw\/master\/images\/dog.jpg\", \"dog.jpg\")\n>>> urllib.request.urlretrieve(url, filename)\n>>> img = Image.open(filename).convert('RGB')\n>>> tensor = transform(img).unsqueeze(0) # transform and add bat"
+    ],
+    "ground_truth":"SE-ResNet employs squeeze-and-excitation blocks to enable the network to perform dynamic channel-wise feature recalibration.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"54",
+        "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/se-resnet.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does BEiT's role in image transformers differ from BERT's in language?",
+    "contexts":[
+      "09701) by Nguyen Luong Tran, Duong Minh Le and Dat Quoc Nguyen.\n1. **[BEiT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/beit)** (from Microsoft) released with the paper [BEiT: BERT Pre-Training of Image Transformers](https:\/\/arxiv.org\/abs\/2106.08254) by Hangbo Bao, Li Dong, Furu Wei.\n1. **[BERT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bert)** (from Google) released with the paper [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https:\/\/arxiv.org\/abs\/1810.04805) by Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanova.\n1. **[BERT For Sequence Generation](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bert-generation)** (from Google) released with the paper [Leveraging Pre-trained Checkpoints for Sequence Generation Tasks](https:\/\/arxiv.org\/abs\/1907.12461) by Sascha Rothe, Shashi Narayan, Aliaksei Severyn.\n1. **[BERTweet](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bertweet)** (from VinAI Research) released with the"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"219",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does reinforcement learning improve sequence modeling?",
+    "contexts":[
+      "n Transformer: Reinforcement Learning via Sequence Modeling](https:\/\/arxiv.org\/abs\/2106.01345) by Lili Chen, Kevin Lu, Aravind Rajeswaran, Kimin Lee, Aditya Grover, Michael Laskin, Pieter Abbeel, Aravind Srinivas, Igor Mordatch.\n1. **[Deformable DETR](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/deformable_detr)** (from SenseTime Research) released with the paper [Deformable DETR: Deformable Transformers for End-to-End Object Detection](https:\/\/arxiv.org\/abs\/2010.04159) by Xizhou Zhu, Weijie Su, Lewei Lu, Bin Li, Xiaogang Wang, Jifeng Dai.\n1. **[DeiT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/deit)** (from Facebook) released with the paper [Training data-efficient image transformers & distillation through attention](https:\/\/arxiv.org\/abs\/2012.12877) by Hugo Touvron, Matthieu Cord, Matthijs Douze, Francisco Massa, Alexandre Sablayrolles, Herv\u00e9 J\u00e9gou.\n1. **[DePlot](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/deplot)** (from Google AI) released with the paper [DePlot"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"234",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"Which initiative created a list of 100 innovative Transformer projects?",
+    "contexts":[
+      "IP](https:\/\/huggingface.co\/openai\/clip-vit-large-patch14)\n- [\u041e\u0442\u0432\u0435\u0442\u044b \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441\u044b \u043f\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043c \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e LayoutLM](https:\/\/huggingface.co\/impira\/layoutlm-document-qa)\n- [Zero-shot \u043a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u0432\u0438\u0434\u0435\u043e \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e X-CLIP](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/xclip)\n\n\n## 100 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0449\u0438\u0445 Transformers\n\nTransformers - \u044d\u0442\u043e \u043d\u0435 \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0431\u043e\u0440 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u043e\u0432 \u0434\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u043f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0431\u0443\u0447\u0435\u043d\u043d\u044b\u0445 \u043c\u043e\u0434\u0435\u043b\u0435\u0439: \u044d\u0442\u043e \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u043e\u0435 \u043d\u0430 \u0435\u0433\u043e \u043e\u0441\u043d\u043e\u0432\u0435, \u0438\nHugging Face Hub. \u041c\u044b \u0445\u043e\u0442\u0438\u043c, \u0447\u0442\u043e\u0431\u044b Transformers \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u043b \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u0430\u043c, \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044f\u043c, \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u0430\u043c, \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u043e\u0440\u0430\u043c, \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u0430\u043c \u0438 \u0432\u0441\u0435\u043c \u0436\u0435\u043b\u0430\u044e\u0449\u0438\u043c\n\u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0441\u0432\u043e\u0435\u0439 \u043c\u0435\u0447\u0442\u044b.\n\n\u0427\u0442\u043e\u0431\u044b \u043e\u0442\u043f\u0440\u0430\u0437\u0434\u043d\u043e\u0432\u0430\u0442\u044c 100 \u0442\u044b\u0441\u044f\u0447 \u0437\u0432\u0435\u0437\u0434 Transformers, \u043c\u044b \u0440\u0435\u0448\u0438\u043b\u0438 \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u0430\u043a\u0446\u0435\u043d\u0442 \u043d\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435, \u0438 \u0441\u043e\u0437\u0434\u0430\u043b\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 [awesome-transformers](.\/awesome-transformers.md), \u043d\u0430 \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043f\u0435\u0440\u0435\u0447\u0438\u0441\u043b\u0435\u043d\u044b 100\n\u043d\u0435\u0432\u0435\u0440\u043e\u044f\u0442\u043d\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u044b\u0445 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e transformers.\n\n\u0415\u0441\u043b\u0438 \u0432\u044b \u044f\u0432\u043b\u044f\u0435\u0442\u0435\u0441\u044c \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0435\u043c \u0438\u043b\u0438 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u043c \u043f\u0440\u043e\u0435\u043a\u0442\u0430, \u043a\u043e\u0442\u043e\u0440\u044b\u0439, \u043f\u043e \u0432\u0430\u0448\u0435\u043c\u0443 \u043c\u043d\u0435\u043d\u0438\u044e, \u0434\u043e\u043b\u0436\u0435\u043d \u0431\u044b\u0442\u044c \u0432\u043a\u043b\u044e\u0447\u0435\u043d \u0432 \u044d\u0442\u043e\u0442 \u0441\u043f\u0438\u0441\u043e"
+    ],
+    "ground_truth":"The initiative that created a list of 100 innovative Transformer projects is the page called awesome-transformers.",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"202",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does Deformable DETR improve end-to-end object detection vs. other transformer models?",
+    "contexts":[
+      "tion Learning For Speech Recognition](https:\/\/arxiv.org\/abs\/2006.13979) by Alexis Conneau, Alexei Baevski, Ronan Collobert, Abdelrahman Mohamed, Michael Auli.\n1. **[YOLOS](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/yolos)** (from Huazhong University of Science & Technology) released with the paper [You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection](https:\/\/arxiv.org\/abs\/2106.00666) by Yuxin Fang, Bencheng Liao, Xinggang Wang, Jiemin Fang, Jiyang Qi, Rui Wu, Jianwei Niu, Wenyu Liu.\n1. **[YOSO](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/yoso)** (from the University of Wisconsin - Madison) released with the paper [You Only Sample (Almost) Once: Linear Cost Self-Attention Via Bernoulli Sampling](https:\/\/arxiv.org\/abs\/2111.09714) by Zhanpeng Zeng, Yunyang Xiong, Sathya N. Ravi, Shailesh Acharya, Glenn Fung, Vikas Singh.\n1. Want to contribute a new model? We have added a **detailed guide and templates** to guide you in the process of add"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"312",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does BioGPT's role in biomedical text compare to Big Bird and BERTweet?",
+    "contexts":[
+      "ormers\/model_doc\/big_bird)** (from Google Research) released with the paper [Big Bird: Transformers for Longer Sequences](https:\/\/arxiv.org\/abs\/2007.14062) by Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, Amr Ahmed.\n1. **[BioGpt](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/biogpt)** (from Microsoft Research AI4Science) released with the paper [BioGPT: generative pre-trained transformer for biomedical text generation and mining](https:\/\/academic.oup.com\/bib\/advance-article\/doi\/10.1093\/bib\/bbac409\/6713511?guestAccessKey=a66d9b5d-4f83-4017-bb52-405815c907b9) by Renqian Luo, Liai Sun, Yingce Xia, Tao Qin, Sheng Zhang, Hoifung Poon and Tie-Yan Liu.\n1. **[BiT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bit)** (from Google AI) released with the paper [Big Transfer (BiT): General Visual Representation Learning](https:\/\/arxiv.org\/abs\/1912.11370) by Alexander Kolesnikov, Lucas Beyer",
+      "ps:\/\/arxiv.org\/abs\/1907.12461) by Sascha Rothe, Shashi Narayan, Aliaksei Severyn.\n1. **[BERTweet](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bertweet)** (from VinAI Research) released with the paper [BERTweet: A pre-trained language model for English Tweets](https:\/\/aclanthology.org\/2020.emnlp-demos.2\/) by Dat Quoc Nguyen, Thanh Vu and Anh Tuan Nguyen.\n1. **[BigBird-Pegasus](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bigbird_pegasus)** (from Google Research) released with the paper [Big Bird: Transformers for Longer Sequences](https:\/\/arxiv.org\/abs\/2007.14062) by Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, Amr Ahmed.\n1. **[BigBird-RoBERTa](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/big_bird)** (from Google Research) released with the paper [Big Bird: Transformers for Longer Sequences](https:\/\/arxiv.org\/abs\/2007.14062) by Manzil Zaheer, Guru Guruganesh, Avinava D"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"221",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      },
+      {
+        "id":"220",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What performance metrics for image classification with SE ResNet, especially Top 1 & Top 5 accuracy?",
+    "contexts":[
+      "tan X GPUs\n    ID: seresnet152d\n    LR: 0.6\n    Epochs: 100\n    Layers: 152\n    Dropout: 0.2\n    Crop Pct: '0.94'\n    Momentum: 0.9\n    Batch Size: 1024\n    Image Size: '256'\n    Interpolation: bicubic\n  Code: https:\/\/github.com\/rwightman\/pytorch-image-models\/blob\/a7f95818e44b281137503bcf4b3e3e94d8ffa52f\/timm\/models\/resnet.py#L1206\n  Weights: https:\/\/github.com\/rwightman\/pytorch-image-models\/releases\/download\/v0.1-weights\/seresnet152d_ra2-04464dd2.pth\n  Results:\n  - Task: Image Classification\n    Dataset: ImageNet\n    Metrics:\n      Top 1 Accuracy: 83.74%\n      Top 5 Accuracy: 96.77%\n- Name: seresnet50\n  In Collection: SE ResNet\n  Metadata:\n    FLOPs: 5285062320\n    Parameters: 28090000\n    File Size: 112621903\n    Architecture:\n    - 1x1 Convolution\n    - Batch Normalization\n    - Bottleneck Residual Block\n    - Convolution\n    - Global Average Pooling\n    - Max Pooling\n    - ReLU\n    - Residual Block\n    - Residual Connection\n    - Softmax\n    - Squeeze-and-Excitation Block\n    Tasks",
+      "eck Residual Block\n    - Convolution\n    - Global Average Pooling\n    - Max Pooling\n    - ReLU\n    - Residual Block\n    - Residual Connection\n    - Softmax\n    - Squeeze-and-Excitation Block\n    Tasks:\n    - Image Classification\n    Training Techniques:\n    - Label Smoothing\n    - SGD with Momentum\n    - Weight Decay\n    Training Data:\n    - ImageNet\n    Training Resources: 8x NVIDIA Titan X GPUs\n    ID: seresnet50\n    LR: 0.6\n    Epochs: 100\n    Layers: 50\n    Dropout: 0.2\n    Crop Pct: '0.875'\n    Momentum: 0.9\n    Batch Size: 1024\n    Image Size: '224'\n    Interpolation: bicubic\n  Code: https:\/\/github.com\/rwightman\/pytorch-image-models\/blob\/a7f95818e44b281137503bcf4b3e3e94d8ffa52f\/timm\/models\/resnet.py#L1180\n  Weights: https:\/\/github.com\/rwightman\/pytorch-image-models\/releases\/download\/v0.1-weights\/seresnet50_ra_224-8efdb4bb.pth\n  Results:\n  - Task: Image Classification\n    Dataset: ImageNet\n    Metrics:\n      Top 1 Accuracy: 80.26%\n      Top 5 Accuracy: 95.07%\n-->"
+    ],
+    "ground_truth":"The performance metrics for image classification with SE ResNet include Top 1 Accuracy of 83.74% and Top 5 Accuracy of 96.77% for the seresnet152d model, and Top 1 Accuracy of 80.26% and Top 5 Accuracy of 95.07% for the seresnet50 model.",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"59",
+        "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/se-resnet.mdx"
+      },
+      {
+        "id":"60",
+        "source":"huggingface\/pytorch-image-models\/blob\/main\/hfdocs\/source\/models\/se-resnet.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What files are saved in your repo during model training?",
+    "contexts":[
+      ", args.adam_beta2),\n    weight_decay=args.adam_weight_decay,\n    eps=args.adam_epsilon,\n)\n```\n\nAside from setting up the LoRA layers, the training script is more or less the same as train_text_to_image.py!\n\n## Launch the script\n\nOnce you've made all your changes or you're okay with the default configuration, you're ready to launch the training script! \ud83d\ude80\n\nLet's train on the [Pok\u00e9mon BLIP captions](https:\/\/huggingface.co\/datasets\/lambdalabs\/pokemon-blip-captions) dataset to generate our yown Pok\u00e9mon. Set the environment variables `MODEL_NAME` and `DATASET_NAME` to the model and dataset respectively. You should also specify where to save the model in `OUTPUT_DIR`, and the name of the model to save to on the Hub with `HUB_MODEL_ID`. The script creates and saves the following files to your repository:\n\n- saved model checkpoints\n- `pytorch_lora_weights.safetensors` (the trained LoRA weights)\n\nIf you're training on more than one GPU, add the `--multi_gpu` parameter to the `accelerate launch`",
+      "sitory:\n\n- saved model checkpoints\n- `pytorch_lora_weights.safetensors` (the trained LoRA weights)\n\nIf you're training on more than one GPU, add the `--multi_gpu` parameter to the `accelerate launch` command.\n\n<Tip warning={true}>\n\nA full training run takes ~5 hours on a 2080 Ti GPU with 11GB of VRAM.\n\n<\/Tip>\n\n```bash\nexport MODEL_NAME=\"runwayml\/stable-diffusion-v1-5\"\nexport OUTPUT_DIR=\"\/sddata\/finetune\/lora\/pokemon\"\nexport HUB_MODEL_ID=\"pokemon-lora\"\nexport DATASET_NAME=\"lambdalabs\/pokemon-blip-captions\"\n\naccelerate launch --mixed_precision=\"fp16\"  train_text_to_image_lora.py \\\n  --pretrained_model_name_or_path=$MODEL_NAME \\\n  --dataset_name=$DATASET_NAME \\\n  --dataloader_num_workers=8 \\\n  --resolution=512 \\\n  --center_crop \\\n  --random_flip \\\n  --train_batch_size=1 \\\n  --gradient_accumulation_steps=4 \\\n  --max_train_steps=15000 \\\n  --learning_rate=1e-04 \\\n  --max_grad_norm=1 \\\n  --lr_scheduler=\"cosine\" \\\n  --lr_warmup_steps=0 \\\n  --output_dir=${OUTPUT_DIR} \\\n  --push_to_hub \\\n  --hub"
+    ],
+    "ground_truth":"During model training, the following files are saved to your repository: saved model checkpoints and `pytorch_lora_weights.safetensors` (the trained LoRA weights).",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"339",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/training\/lora.md"
+      },
+      {
+        "id":"340",
+        "source":"huggingface\/diffusers\/blob\/main\/docs\/source\/en\/training\/lora.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does ALIGN improve Transformer performance for visual and vision-language tasks?",
+    "contexts":[
+      ", \u043a\u0443\u0434\u0430 \u043e\u043d\u0438 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u043d\u0435\u043f\u043e\u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0435\u043d\u043d\u043e [\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f\u043c\u0438](https:\/\/huggingface.co\/users) \u0438 [\u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u044f\u043c\u0438](https:\/\/huggingface.co\/organizations).\n\n\u0422\u0435\u043a\u0443\u0449\u0435\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u044b\u0445 \u0442\u043e\u0447\u0435\u043a: ![](https:\/\/img.shields.io\/endpoint?url=https:\/\/huggingface.co\/api\/shields\/models&color=brightgreen)\n\n\ud83e\udd17 \u0412 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f Transformers \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435 \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b (\u043f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043a\u0430\u0436\u0434\u043e\u0439 \u0438\u0437 \u043d\u0438\u0445 \u0441\u043c. [\u0437\u0434\u0435\u0441\u044c](https:\/\/huggingface.co\/docs\/transformers\/model_summary)):\n\n1. **[ALBERT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/albert)** (from Google Research and the Toyota Technological Institute at Chicago) released with the paper [ALBERT: A Lite BERT for Self-supervised Learning of Language Representations](https:\/\/arxiv.org\/abs\/1909.11942), by Zhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, Radu Soricut.\n1. **[ALIGN](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/align)** (from Google Research) released with the paper [Scaling Up Visual and Vision-Language Repr"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"215",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What command starts agent training in a given environment with config options and possible visualization off?",
+    "contexts":[
+      "we need to\u00a0**launch mlagents-learn and select the executable containing the environment.**\n\nWe define four parameters:\n\n1. `mlagents-learn <config>`: the path where the hyperparameter config file is.\n2. `-env`: where the environment executable is.\n3. `-run_id`: the name you want to give to your training run id.\n4. `-no-graphics`: to not launch the visualization during the training.\n\nDepending on your hardware, 5M timesteps (the recommended value, but you can also try 10M) will take 5 to 8 hours of training. You can continue using your computer in the meantime, but I advise deactivating the computer standby mode to prevent the training from being stopped.\n\nDepending on the executable you use (windows, ubuntu, mac) the training command will look like this (your executable path can be different so don\u2019t hesitate to check before running).\n\n```bash\nmlagents-learn .\/config\/poca\/SoccerTwos.yaml --env=.\/training-envs-executables\/SoccerTwos.exe --run-id=\"SoccerTwos\" --no-graphics\n```\n\nThe exec",
+      "ent so don\u2019t hesitate to check before running).\n\n```bash\nmlagents-learn .\/config\/poca\/SoccerTwos.yaml --env=.\/training-envs-executables\/SoccerTwos.exe --run-id=\"SoccerTwos\" --no-graphics\n```\n\nThe executable contains 8 copies of SoccerTwos.\n\n\u26a0\ufe0f It\u2019s normal if you don\u2019t see a big increase of ELO score (and even a decrease below 1200) before 2M timesteps, since your agents will spend most of their time moving randomly on the field before being able to goal.\n\n\u26a0\ufe0f You can stop the training with Ctrl + C but beware of typing this command only once to stop the training since MLAgents needs to generate a final .onnx file before closing the run.\n\n## Step 5: **Push the agent to the Hugging Face Hub**\n\nNow that we trained our agents, we\u2019re\u00a0**ready to push them to the Hub to be able to participate in the AI vs. AI challenge and visualize them playing on your browser\ud83d\udd25.**\n\nTo be able to share your model with the community, there are three more steps to follow:\n\n1\ufe0f\u20e3 (If it\u2019s not already done) create a"
+    ],
+    "ground_truth":"The command to start agent training in a given environment with config options and possible visualization off is: `mlagents-learn .\/config\/poca\/SoccerTwos.yaml --env=.\/training-envs-executables\/SoccerTwos.exe --run-id=\"SoccerTwos\" --no-graphics`.",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"410",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit7\/hands-on.mdx"
+      },
+      {
+        "id":"411",
+        "source":"huggingface\/deep-rl-class\/blob\/main\/units\/en\/unit7\/hands-on.mdx"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does the BEiT model improve NLP pre-training compared to BART and BERT?",
+    "contexts":[
+      "e paper [BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension](https:\/\/arxiv.org\/abs\/1910.13461) by Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Ves Stoyanov and Luke Zettlemoyer.\n1. **[BARThez](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/barthez)** (from \u00c9cole polytechnique) released with the paper [BARThez: a Skilled Pretrained French Sequence-to-Sequence Model](https:\/\/arxiv.org\/abs\/2010.12321) by Moussa Kamal Eddine, Antoine J.-P. Tixier, Michalis Vazirgiannis.\n1. **[BARTpho](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bartpho)** (from VinAI Research) released with the paper [BARTpho: Pre-trained Sequence-to-Sequence Models for Vietnamese](https:\/\/arxiv.org\/abs\/2109.09701) by Nguyen Luong Tran, Duong Minh Le and Dat Quoc Nguyen.\n1. **[BEiT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/beit)** (from Microsoft) released with the paper [BEiT: BERT Pre-Training",
+      "09701) by Nguyen Luong Tran, Duong Minh Le and Dat Quoc Nguyen.\n1. **[BEiT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/beit)** (from Microsoft) released with the paper [BEiT: BERT Pre-Training of Image Transformers](https:\/\/arxiv.org\/abs\/2106.08254) by Hangbo Bao, Li Dong, Furu Wei.\n1. **[BERT](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bert)** (from Google) released with the paper [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https:\/\/arxiv.org\/abs\/1810.04805) by Jacob Devlin, Ming-Wei Chang, Kenton Lee and Kristina Toutanova.\n1. **[BERT For Sequence Generation](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bert-generation)** (from Google) released with the paper [Leveraging Pre-trained Checkpoints for Sequence Generation Tasks](https:\/\/arxiv.org\/abs\/1907.12461) by Sascha Rothe, Shashi Narayan, Aliaksei Severyn.\n1. **[BERTweet](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/bertweet)** (from VinAI Research) released with the"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"218",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      },
+      {
+        "id":"219",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does batch processing help in analyzing images and text for object detection?",
+    "contexts":[
+      "uts, threshold=0.1, target_sizes=target_sizes)[0]\n\n>>> draw = ImageDraw.Draw(im)\n\n>>> scores = results[\"scores\"].tolist()\n>>> labels = results[\"labels\"].tolist()\n>>> boxes = results[\"boxes\"].tolist()\n\n>>> for box, score, label in zip(boxes, scores, labels):\n...     xmin, ymin, xmax, ymax = box\n...     draw.rectangle((xmin, ymin, xmax, ymax), outline=\"red\", width=1)\n...     draw.text((xmin, ymin), f\"{text_queries[label]}: {round(score,2)}\", fill=\"white\")\n\n>>> im\n```\n\n<div class=\"flex justify-center\">\n     <img src=\"https:\/\/huggingface.co\/datasets\/huggingface\/documentation-images\/resolve\/main\/transformers\/tasks\/zero-sh-obj-detection_4.png\" alt=\"Beach photo with detected objects\"\/>\n<\/div>\n\n## Batch processing\n\nYou can pass multiple sets of images and text queries to search for different (or same) objects in several images.\nLet's use both an astronaut image and the beach image together.\nFor batch processing, you should pass text queries as a nested list to the processor and images as lists",
+      "...     outputs = model(**inputs)\n...     target_sizes = [x.size[::-1] for x in images]\n...     results = processor.post_process_object_detection(outputs, threshold=0.1, target_sizes=target_sizes)\n\n>>> image_idx = 1\n>>> draw = ImageDraw.Draw(images[image_idx])\n\n>>> scores = results[image_idx][\"scores\"].tolist()\n>>> labels = results[image_idx][\"labels\"].tolist()\n>>> boxes = results[image_idx][\"boxes\"].tolist()\n\n>>> for box, score, label in zip(boxes, scores, labels):\n...     xmin, ymin, xmax, ymax = box\n...     draw.rectangle((xmin, ymin, xmax, ymax), outline=\"red\", width=1)\n...     draw.text((xmin, ymin), f\"{text_queries[image_idx][label]}: {round(score,2)}\", fill=\"white\")\n\n>>> images[image_idx]\n```\n\n<div class=\"flex justify-center\">\n     <img src=\"https:\/\/huggingface.co\/datasets\/huggingface\/documentation-images\/resolve\/main\/transformers\/tasks\/zero-sh-obj-detection_4.png\" alt=\"Beach photo with detected objects\"\/>\n<\/div>\n\n## Image-guided object detection\n\nIn addition to zero-shot object"
+    ],
+    "ground_truth":"Batch processing helps in analyzing images and text for object detection by allowing multiple sets of images and text queries to be passed together. This enables the model to search for different or the same objects across several images simultaneously, improving efficiency and streamlining the detection process.",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"143",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/zero_shot_object_detection.md"
+      },
+      {
+        "id":"145",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/tasks\/zero_shot_object_detection.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does recall affect model efficacy, especially with precision and F1 scores?",
+    "contexts":[
+      "for overall and per type:\n\nOverall (weighted and macro avg):\n\n`accuracy`: the average [accuracy](https:\/\/huggingface.co\/metrics\/accuracy), on a scale between 0.0 and 1.0.\n    \n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n    \n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), which is the harmonic mean of the precision and recall. It also has a scale of 0.0 to 1.0.\n\nPer type (e.g. `MISC`, `PER`, `LOC`,...):\n\n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n\n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), on a scale between 0.0 and 1.0.\n\n\n## Examples \n\n```python\n>>> predictions = [['INTJ', 'ADP', 'PROPN', 'NOUN', 'PUNCT', '"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"65",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/poseval\/README.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What key info on capabilities, limits, and ethics is in the DistilBert README.md?",
+    "contexts":[
+      "your repository. The model card is defined in the `README.md` file. You can add a model card by:\n\n* Manually creating and uploading a `README.md` file.\n* Clicking on the **Edit model card** button in your model repository.\n\nTake a look at the DistilBert [model card](https:\/\/huggingface.co\/distilbert-base-uncased) for a good example of the type of information a model card should include. For more details about other options you can control in the `README.md` file such as a model's carbon footprint or widget examples, refer to the documentation [here](https:\/\/huggingface.co\/docs\/hub\/models-cards).",
+      "esolve\/main\/new_model_repo.png)\n\nFrom here, add some information about your model:\n\n- Select the **owner** of the repository. This can be yourself or any of the organizations you belong to.\n- Pick a name for your model, which will also be the repository name.\n- Choose whether your model is public or private.\n- Specify the license usage for your model.\n\nNow click on the **Files** tab and click on the **Add file** button to upload a new file to your repository. Then drag-and-drop a file to upload and add a commit message.\n\n![upload_file](https:\/\/huggingface.co\/datasets\/huggingface\/documentation-images\/resolve\/main\/upload_file.png)\n\n## Add a model card\n\nTo make sure users understand your model's capabilities, limitations, potential biases and ethical considerations, please add a model card to your repository. The model card is defined in the `README.md` file. You can add a model card by:\n\n* Manually creating and uploading a `README.md` file.\n* Clicking on the **Edit model card** button in"
+    ],
+    "ground_truth":"The context does not provide specific information about the capabilities, limitations, or ethical considerations included in the DistilBert README.md.",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"329",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_sharing.md"
+      },
+      {
+        "id":"328",
+        "source":"huggingface\/transformers\/blob\/main\/docs\/source\/en\/model_sharing.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"How does zero-shot image classification boost multimodal tasks, especially for models like CLIP and X-CLIP?",
+    "contexts":[
+      "o\/docs\/transformers\/model_doc\/videomae)\n- [\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e OneFormer](https:\/\/huggingface.co\/shi-labs\/oneformer_ade20k_dinat_large)\n\n\u0412 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0437\u0432\u0443\u043a\u0430:\n- [\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u043d\u0438\u0435 \u0440\u0435\u0447\u0438 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e Wav2Vec2](https:\/\/huggingface.co\/facebook\/wav2vec2-base-960h)\n- [\u041f\u043e\u0438\u0441\u043a \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0445 \u0441\u043b\u043e\u0432 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e Wav2Vec2](https:\/\/huggingface.co\/superb\/wav2vec2-base-superb-ks)\n- [\u041a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u0430\u0443\u0434\u0438\u043e\u0434\u0430\u043d\u043d\u044b\u0445 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0442\u0440\u0430\u0441\u043d\u0444\u043e\u0440\u043c\u0435\u0440\u0430 \u0430\u0443\u0434\u0438\u043e\u0441\u043f\u0435\u043a\u0442\u0440\u043e\u0433\u0440\u0430\u043c\u043c](https:\/\/huggingface.co\/MIT\/ast-finetuned-audioset-10-10-0.4593)\n\n\u0412 \u043c\u0443\u043b\u044c\u0442\u0438\u043c\u043e\u0434\u0430\u043b\u044c\u043d\u044b\u0445 \u0437\u0430\u0434\u0430\u0447\u0430\u0445:\n- [\u041e\u0442\u0432\u0435\u0442\u044b \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441\u044b \u043f\u043e \u0442\u0430\u0431\u043b\u0438\u0446\u0435 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e TAPAS](https:\/\/huggingface.co\/google\/tapas-base-finetuned-wtq)\n- [\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0435 \u043e\u0442\u0432\u0435\u0442\u044b \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441\u044b \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e ViLT](https:\/\/huggingface.co\/dandelin\/vilt-b32-finetuned-vqa)\n- [Zero-shot \u043a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e CLIP](https:\/\/huggingface.co\/openai\/clip-vit-large-patch14)\n- [\u041e\u0442\u0432\u0435\u0442\u044b \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441\u044b \u043f\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043c \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e LayoutLM](https:\/\/huggingface.co\/impira\/layoutlm-document-qa)\n- [Zero-shot \u043a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u0432\u0438\u0434\u0435\u043e \u0441",
+      "IP](https:\/\/huggingface.co\/openai\/clip-vit-large-patch14)\n- [\u041e\u0442\u0432\u0435\u0442\u044b \u043d\u0430 \u0432\u043e\u043f\u0440\u043e\u0441\u044b \u043f\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u043c \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e LayoutLM](https:\/\/huggingface.co\/impira\/layoutlm-document-qa)\n- [Zero-shot \u043a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u0432\u0438\u0434\u0435\u043e \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e X-CLIP](https:\/\/huggingface.co\/docs\/transformers\/model_doc\/xclip)\n\n\n## 100 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0449\u0438\u0445 Transformers\n\nTransformers - \u044d\u0442\u043e \u043d\u0435 \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0431\u043e\u0440 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u043e\u0432 \u0434\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u043f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0431\u0443\u0447\u0435\u043d\u043d\u044b\u0445 \u043c\u043e\u0434\u0435\u043b\u0435\u0439: \u044d\u0442\u043e \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u043e\u0435 \u043d\u0430 \u0435\u0433\u043e \u043e\u0441\u043d\u043e\u0432\u0435, \u0438\nHugging Face Hub. \u041c\u044b \u0445\u043e\u0442\u0438\u043c, \u0447\u0442\u043e\u0431\u044b Transformers \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u043b \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u0430\u043c, \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044f\u043c, \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u0430\u043c, \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u043e\u0440\u0430\u043c, \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u0430\u043c \u0438 \u0432\u0441\u0435\u043c \u0436\u0435\u043b\u0430\u044e\u0449\u0438\u043c\n\u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0441\u0432\u043e\u0435\u0439 \u043c\u0435\u0447\u0442\u044b.\n\n\u0427\u0442\u043e\u0431\u044b \u043e\u0442\u043f\u0440\u0430\u0437\u0434\u043d\u043e\u0432\u0430\u0442\u044c 100 \u0442\u044b\u0441\u044f\u0447 \u0437\u0432\u0435\u0437\u0434 Transformers, \u043c\u044b \u0440\u0435\u0448\u0438\u043b\u0438 \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u0430\u043a\u0446\u0435\u043d\u0442 \u043d\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435, \u0438 \u0441\u043e\u0437\u0434\u0430\u043b\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 [awesome-transformers](.\/awesome-transformers.md), \u043d\u0430 \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043f\u0435\u0440\u0435\u0447\u0438\u0441\u043b\u0435\u043d\u044b 100\n\u043d\u0435\u0432\u0435\u0440\u043e\u044f\u0442\u043d\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u044b\u0445 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e transformers.\n\n\u0415\u0441\u043b\u0438 \u0432\u044b \u044f\u0432\u043b\u044f\u0435\u0442\u0435\u0441\u044c \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0435\u043c \u0438\u043b\u0438 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u043c \u043f\u0440\u043e\u0435\u043a\u0442\u0430, \u043a\u043e\u0442\u043e\u0440\u044b\u0439, \u043f\u043e \u0432\u0430\u0448\u0435\u043c\u0443 \u043c\u043d\u0435\u043d\u0438\u044e, \u0434\u043e\u043b\u0436\u0435\u043d \u0431\u044b\u0442\u044c \u0432\u043a\u043b\u044e\u0447\u0435\u043d \u0432 \u044d\u0442\u043e\u0442 \u0441\u043f\u0438\u0441\u043e"
+    ],
+    "ground_truth":"The answer to given question is not present in context",
+    "evolution_type":"multi_context",
+    "metadata":[
+      {
+        "id":"201",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      },
+      {
+        "id":"202",
+        "source":"huggingface\/transformers\/blob\/main\/README_ru.md"
+      }
+    ],
+    "episode_done":true
+  },
+  {
+    "question":"What metric blends precision & recall, and how's it calculated?",
+    "contexts":[
+      "for overall and per type:\n\nOverall (weighted and macro avg):\n\n`accuracy`: the average [accuracy](https:\/\/huggingface.co\/metrics\/accuracy), on a scale between 0.0 and 1.0.\n    \n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n    \n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), which is the harmonic mean of the precision and recall. It also has a scale of 0.0 to 1.0.\n\nPer type (e.g. `MISC`, `PER`, `LOC`,...):\n\n`precision`: the average [precision](https:\/\/huggingface.co\/metrics\/precision), on a scale between 0.0 and 1.0.\n\n`recall`: the average [recall](https:\/\/huggingface.co\/metrics\/recall), on a scale between 0.0 and 1.0.\n\n`f1`: the average [F1 score](https:\/\/huggingface.co\/metrics\/f1), on a scale between 0.0 and 1.0.\n\n\n## Examples \n\n```python\n>>> predictions = [['INTJ', 'ADP', 'PROPN', 'NOUN', 'PUNCT', '"
+    ],
+    "ground_truth":"The metric that blends precision and recall is the F1 score, which is calculated as the harmonic mean of precision and recall.",
+    "evolution_type":"reasoning",
+    "metadata":[
+      {
+        "id":"65",
+        "source":"huggingface\/evaluate\/blob\/main\/metrics\/poseval\/README.md"
+      }
+    ],
+    "episode_done":true
+  }
+]
